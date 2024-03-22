@@ -9,23 +9,23 @@
 <body class="text-white">
     <img src="static/background.png" alt="Background" class="absolute -z-50 w-screen">
     <section class="m-auto container">
-        <header class="flex items-center justify-between">
+        <header class="flex items-center justify-between py-2">
             <div class="">
                 <img src="static/logo.svg" alt="Treant Lab">
             </div>
             <nav>
-                <ul class="flex space-x-10 p-4">
+                <ul class="flex space-x-10 p-4 items-center">
                     <li>Inicio</li>
                     <li>Servicos</li>
                     <li>Quem Somos</li>
                     <li>Contato</li>
-                    <li>Quero me tornar parceiro</li>
+                    <li class="bg-[#22B573] px-4 py-2 rounded-full">Quero me tornar parceiro</li>
                 </ul>
             </nav>
         </header>
 
-        <div class="mt-8">
-            <div>
+        <div class="mt-8 flex items-start justify-between">
+            <div class="flex flex-col flex-1">
                 <div class="flex space-x-4 mb-4">
                     <div class="w-14 h-1 bg-[#22B573] rounded"></div>
                     <div class="w-14 h-1 bg-white/20 rounded"></div>
@@ -36,66 +36,78 @@
                     <div class="bg-gradient-to-r from-white to-gray-400 inline-block text-transparent bg-clip-text font-semibold text-lg">
                         SEGURANCA EXTERNA
                     </div>
-                    <div>Pentest All Box</div>
-                    <div>
+                    <div class="text-6xl font-bold">
+                        <span class="text-[#22B573]">Pentest</span> All Box
+                    </div>
+                    <div class="mt-3">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo consectetur repudiandae animi pariatur facilis doloremque reprehenderit ab! Libero delectus, laborum quia eveniet sint maiores expedita accusamus, vitae saepe consectetur ipsam?
                     </div>
                 </div>
 
-                <div>
-                    <div>Fale com especialista</div>
-                    <div>Conhecer nossos servicos</div>
+                <div class="flex space-x-6 mt-4">
+                    <div class="bg-[#22B573] px-4 py-2 rounded-full">Fale com especialista</div>
+                    <div class="border border-[#22B573] px-4 py-2 rounded-full">Conhecer nossos servicos</div>
                 </div>
             </div>
 
-            <div>
+            <div class="flex flex-1 justify-center">
                 <img src="static/first_banner.svg" alt="Primeiro banner">
             </div>
         </div>
     </section>
 
-    <section class="m-auto container">
-        <div>
-            <div>
-                <div><img src="static/pentest_icon.svg" alt=""></div>
-                <div>Pentest</div>
-                <div>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia iusto nulla modi quos et eaque, laudantium corporis ut minima repudiandae. Eius minima molestias voluptatibus possimus aliquid eaque neque nisi architecto.</div>
-            </div>
-            <div>
-                <div><img src="static/threat_icon.svg" alt=""></div>
-                <div>Threat Inteligence</div>
-                <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque aspernatur accusamus alias et, mollitia eveniet totam amet a placeat quos libero eaque, vero exercitationem qui odit adipisci ipsa labore nemo.</div>
-            </div>
-            <div>
-                <div><img src="static/development_icon.svg" alt=""></div>
-                <div>Desenvolvimento</div>
-                <div>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia iusto nulla modi quos et eaque, laudantium corporis ut minima repudiandae. Eius minima molestias voluptatibus possimus aliquid eaque neque nisi architecto.</div>
-            </div>
-            <div>
-                <div><img src="static/training_icon.svg" alt=""></div>
-                <div>Treinamento</div>
-                <div>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia iusto nulla modi quos et eaque, laudantium corporis ut minima repudiandae. Eius minima molestias voluptatibus possimus aliquid eaque neque nisi architecto.</div>
-            </div>
+    <section class="m-auto container flex items-start justify-between bg-white">
+        <div class="flex flex-row flex-1">
+           <div class="grid grid-cols-2 gap-8">
+                <div class="bg-white text-black flex flex-col items-start p-4 rounded shadow">
+                    <div class="w-full flex flex-1 justify-center">
+                        <img class="w-32 mt-5" src="static/pentest_icon.svg" alt="">
+                    </div>
+                    <div class="font-semibold">Pentest</div>
+                    <div class="text-sm text-gray-500">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia iusto nulla modi quos et eaque, laudantium corporis ut minima repudiandae. Eius minima molestias voluptatibus possimus aliquid eaque neque nisi architecto.</div>
+                </div>
+                <div class="bg-white text-black flex flex-col items-start p-4 rounded shadow">
+                    <div class="w-full flex flex-1 justify-center">
+                        <img class="w-32 mt-5" src="static/threat_icon.svg" alt="">
+                    </div>
+                    <div class="font-semibold">Threat Inteligence</div>
+                    <div class="text-sm text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque aspernatur accusamus alias et, mollitia eveniet totam amet a placeat quos libero eaque, vero exercitationem qui odit adipisci ipsa labore nemo.</div>
+                </div>
+                <div class="bg-white text-black flex flex-col items-start p-4 rounded shadow">
+                    <div class="w-full flex flex-1 justify-center">
+                        <img class="w-32 mt-5" src="static/development_icon.svg" alt="">
+                    </div>
+                    <div class="font-semibold">Desenvolvimento</div>
+                    <div class="text-sm text-gray-500">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia iusto nulla modi quos et eaque, laudantium corporis ut minima repudiandae. Eius minima molestias voluptatibus possimus aliquid eaque neque nisi architecto.</div>
+                </div>
+                <div class="bg-white text-black flex flex-col items-start p-4 rounded shadow">
+                    <div class="w-full flex flex-1 justify-center">
+                        <img class="w-32 mt-5" src="static/training_icon.svg" alt="">
+                    </div>
+                    <div class="font-semibold">Treinamento</div>
+                    <div class="text-sm text-gray-500">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia iusto nulla modi quos et eaque, laudantium corporis ut minima repudiandae. Eius minima molestias voluptatibus possimus aliquid eaque neque nisi architecto.</div>
+                </div>
+           </div>
         </div>
 
-        <div>
-            <div>
+        <div class="flex flex-col flex-1 text-black py-40 px-10">
+            <div class="font-bold text-3xl mb-4">
                 E muito mais
             </div>
-            <div>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio illo aliquid, sint quasi, impedit iusto iure quisquam voluptatibus tenetur nemo delectus consequatur. Itaque, optio mollitia quisquam a dicta fugit beatae.
+            <div class="text-gray-400 font-light mb-6">
+                Somos especialistas em segurança, atuamos em áreas diversas e etc. Consulte nossos especialistas e encontre um serviço personalizado para o que a sua empresa deseja. Consulte nossos especialistas e encontre um serviço personalizado para o que a sua empresa deseja. Consulte nossos especialistas e encontre um serviço personalizado para o que a sua empresa deseja
             </div>
-            <div>Quero conhecer os servicos</div>
+            <div class="border border-[#22B573] px-4 py-2 rounded-full w-64 text-center font-semibold">Quero conhecer os servicos</div>
         </div>
     </section>
 
-    <section class="m-auto container">
-        <div>
-            <div>Somos consultores</div>
-            <div>Somos especialista em Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe necessitatibus repellendus expedita non ipsam. Distinctio et earum cupiditate, voluptatum assumenda quod explicabo, nulla eius omnis ipsam, laborum dolorum similique voluptate.</div>
+    <section class="mt-28 m-auto container bg-[#1E1E1E] rounded-xl flex justify-between items-center">
+        <div class="px-40 w-1/2">
+            <div class="px-6 text-2xl font-semibold mb-2">Somos consultores</div>
+            <div class="border-l-4 px-6 border-[#22B573] w-full">Somos especialista em Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe necessitatibus repellendus expedita non ipsam. Distinctio et earum cupiditate, voluptatum assumenda quod explicabo, nulla eius omnis ipsam, laborum dolorum similique voluptate.</div>
         </div>
     
-        <div>
+        <div class="-mt-28">
             <img src="static/second_banner.png" alt="Segundo banner">
         </div>
     </section>
