@@ -8,7 +8,7 @@ const nextConfig = {
   output: 'export',
   // Adicione o basePath com o nome do seu repositório
   // Exemplo: se seu repositório é 'treantlab-modern', use '/treantlab-modern'
-  basePath: '', // Deixe vazio se o site estiver na raiz do domínio',
+  basePath: '',
   eslint: {
     ignoreDuringBuilds: true,
   },
