@@ -7,8 +7,9 @@ const withNextIntl = createNextIntlPlugin('./i18n.ts');
 const nextConfig = {
   output: 'export',
   // Adicione o basePath com o nome do seu repositório
-  // Exemplo: se seu repositório é 'treantlab-modern', use '/treantlab-modern'
-  // basePath: '',
+  // Exemplo: se seu repositório é 'github.com/usuario/website e o build ta caindo no /docs
+  // basePath: '/NOME-DO-REPO',
+  basePath: null,
   eslint: {
     ignoreDuringBuilds: true,
   },
