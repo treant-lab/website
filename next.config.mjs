@@ -9,7 +9,7 @@ const nextConfig = {
   // Adicione o basePath com o nome do seu repositório
   // Exemplo: se seu repositório é 'github.com/usuario/website e o build ta caindo no /docs
   // basePath: '/NOME-DO-REPO',
-  basePath: null,
+  basePath: '',
   eslint: {
     ignoreDuringBuilds: true,
   },
