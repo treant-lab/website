@@ -8,6 +8,7 @@ const nextConfig = {
   output: 'export',
   // Adicione o basePath com o nome do seu repositório
   // Exemplo: se seu repositório é 'treantlab-modern', use '/treantlab-modern'
+  basePath: '', // Deixe vazio se o site estiver na raiz do domínio',
   eslint: {
     ignoreDuringBuilds: true,
   },
@@ -19,6 +20,7 @@ const nextConfig = {
   },
   // Suas configurações existentes do Next.js (se houver)
   // ...
+  distDir: 'docs', // Define o diretório de saída para a exportação estática
 };
 
 // É CRÍTICO que a sua configuração seja exportada através de withNextIntl
