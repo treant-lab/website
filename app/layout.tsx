@@ -1,7 +1,6 @@
 import type { ReactNode } from "react"
-import { cookies } from "next/headers"
 import { NextIntlClientProvider } from "next-intl"
-import { getMessages } from "next-intl/server"
+import { getMessages } from "next-intl/server" // Isso é compatível com SSG
 import "./globals.css" // Importe o CSS global aqui
 
 type Props = {
@@ -10,16 +9,13 @@ type Props = {
 }
 
 export default async function LocaleLayout({ children, params: { locale } }: Props) {
-  // Lê o cookie do idioma
-  const cookieLocale = cookies().get("NEXT_LOCALE")?.value || "pt"
-  const messages = await getMessages({ locale: cookieLocale })
+  // Fornecendo todas as mensagens para o lado do cliente
+  const messages = await getMessages()
 
   return (
-    <html lang={cookieLocale}>
+    <html lang={locale}>
       <body>
-        <NextIntlClientProvider locale={cookieLocale} messages={messages}>
-          {children}
-        </NextIntlClientProvider>
+        <NextIntlClientProvider messages={messages}>{children}</NextIntlClientProvider>
       </body>
     </html>
   )
