@@ -1,5 +1,4 @@
 "use client"
-
 import { useState, useEffect, useRef } from "react"
 import { motion } from "framer-motion"
 import { ArrowRight, CheckCircle, Star, Globe, Lock, Zap } from "lucide-react"
@@ -113,11 +112,9 @@ export default function TreantLabPage() {
   const [isLoading, setIsLoading] = useState(true)
   const [currentSlide, setCurrentSlide] = useState(0)
   const intervalRef = useRef<NodeJS.Timeout | null>(null)
-
   const [isNavButtonHovered, setIsNavButtonHovered] = useState(false)
   const [isHeroButtonHovered, setIsHeroButtonHovered] = useState(false)
   const [glitchHeroHighlight, setGlitchHeroHighlight] = useState(false)
-
   const [activeSection, setActiveSection] = useState<string | null>(null)
 
   const heroRef = useRef<HTMLElement>(null)
@@ -185,7 +182,7 @@ export default function TreantLabPage() {
   }
 
   useEffect(() => {
-    const timer = setTimeout(() => setIsLoading(false), Math.random() * 1000 + 1000) // 
+    const timer = setTimeout(() => setIsLoading(false), Math.random() * 1000 + 1000) //
     return () => clearTimeout(timer)
   }, [])
 
@@ -244,7 +241,6 @@ export default function TreantLabPage() {
                 animation: "colorShift 5s infinite linear",
               }}
             />
-
             {/* Glitch Layers - Exatamente como na v6 */}
             <div className="absolute left-0 right-0 top-0 bottom-0 z-20">
               <motion.div
@@ -444,7 +440,6 @@ export default function TreantLabPage() {
                 </Button>
               </div>
             </motion.div>
-
             <motion.div
               className="relative"
               initial={{ opacity: 0, x: 50 }}
@@ -453,7 +448,6 @@ export default function TreantLabPage() {
             >
               <div className="relative w-full h-96 bg-gradient-to-br from-emerald-600/20 to-transparent rounded-2xl p-8">
                 <div className="absolute inset-0 bg-grid-pattern opacity-10" />
-
                 {/* Seleção de serviço lateral - Agora interativa, mantendo ícones e layout da v6 */}
                 <div
                   className="relative z-10 h-full flex flex-col justify-center"
@@ -543,7 +537,6 @@ export default function TreantLabPage() {
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">{t("Services.description")}</p>
           </motion.div>
-
           <div className="grid lg:grid-cols-2 gap-8">
             {servicesData.map((service, index) => (
               <motion.div
@@ -583,7 +576,6 @@ export default function TreantLabPage() {
               </motion.div>
             ))}
           </div>
-
           {/* E muito mais section */}
           <motion.div
             className="mt-16 text-center"
@@ -645,7 +637,6 @@ export default function TreantLabPage() {
                 </div>
               </div>
             </motion.div>
-
             <motion.div
               className="relative"
               initial={{ opacity: 0, x: 50 }}
@@ -698,7 +689,6 @@ export default function TreantLabPage() {
             </Badge>
             <h2 className="text-4xl lg:text-5xl font-bold mb-6">{t("Testimonials.what_clients_say")}</h2>
           </motion.div>
-
           <div className="grid lg:grid-cols-3 gap-8">
             {testimonialsData.map((testimonial, index) => (
               <motion.div
@@ -749,7 +739,6 @@ export default function TreantLabPage() {
             <h2 className="text-4xl lg:text-5xl font-bold mb-6">{t("Contact.protect_business_together")}</h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">{t("Contact.description")}</p>
           </motion.div>
-
           <motion.div
             className="max-w-2xl mx-auto"
             initial={{ opacity: 0, y: 20 }}

@@ -1,25 +1,26 @@
 "use client"
-
 import { useLocale } from "next-intl"
 import Image from "next/image"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { useRouter, usePathname } from "next/navigation" // Import useRouter e usePathname
+
+function getCookieLocale() {
+  const match = document.cookie.match(/(?:^|; )NEXT_LOCALE=([^;]*)/)
+  return match ? decodeURIComponent(match[1]) : null
+}
 
 export function LanguageSwitcher() {
   const locale = useLocale()
-  const router = useRouter()
-  const pathname = usePathname()
+  const cookieLocale = typeof window !== "undefined" ? getCookieLocale() : null
+  const currentLocale = cookieLocale || locale
 
   const handleLocaleChange = (newLocale: string) => {
-    // Constrói o novo caminho com o locale selecionado
-    // Exemplo: se o caminho atual é /en/about, e o newLocale é 'pt', o newPath será /pt/about
-    // O substring(3) remove o '/xx/' inicial do pathname atual
-    const newPath = `/${newLocale}${pathname.substring(3)}`
-    router.push(newPath)
+    localStorage.setItem("NEXT_LOCALE_PREFERENCE", newLocale)
+    document.cookie = `NEXT_LOCALE=${newLocale}; path=/; max-age=${60 * 60 * 24 * 365}; SameSite=Lax`
+    window.location.reload() // Recarrega a página para aplicar o novo idioma
   }
 
   return (
-    <Select value={locale} onValueChange={handleLocaleChange}>
+    <Select value={currentLocale} onValueChange={handleLocaleChange}>
       <SelectTrigger className="w-[80px] bg-gray-800 border-gray-700 text-white focus:ring-emerald-600">
         <SelectValue placeholder="Lang" />
       </SelectTrigger>
