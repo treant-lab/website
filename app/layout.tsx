@@ -1,7 +1,7 @@
 import type { ReactNode } from "react"
 import { NextIntlClientProvider } from "next-intl"
-import { getMessages } from "next-intl/server" // Isso é compatível com SSG
-import "./globals.css" // Importe o CSS global aqui
+import { getMessages } from "next-intl/server"
+import "./globals.css"
 
 type Props = {
   children: ReactNode
@@ -9,12 +9,12 @@ type Props = {
 }
 
 export default async function LocaleLayout({ children, params: { locale } }: Props) {
-  // Fornecendo todas as mensagens para o lado do cliente
   const messages = await getMessages()
 
   return (
     <html lang={locale}>
       <head>
+        <title>TreantLab - Cybersecurity Specialists</title> {/* Título do site */}
         <link rel="icon" href="/static/logo_head.png" />
       </head>
       <body>

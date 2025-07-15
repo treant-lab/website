@@ -1,7 +1,7 @@
 2:I[9107,[],"ClientPageRoot"]
-3:I[3038,["648","static/chunks/648-9912c3a1609cd4d2.js","871","static/chunks/871-4e7c56d3b9b367f0.js","931","static/chunks/app/page-1fa3ff2d01ac7e99.js"],"default",1]
-0:["EAXNiJ7WUjx43YN4H5RQU",[[["",{"children":["__PAGE__",{}]},"$undefined","$undefined",true],["",{"children":["__PAGE__",{},[["$L1",["$","$L2",null,{"props":{"params":{},"searchParams":{}},"Component":"$3"}],null],null],null]},[[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/bdcc04a4a62ccaa0.css","precedence":"next","crossOrigin":"$undefined"}]],"$L4"],null],null],["$L5",null]]]]
-4:["$","html",null,{"lang":"$undefined","children":[["$","head",null,{"children":["$","link",null,{"rel":"icon","href":"/static/logo_head.png"}]}],["$","body",null,{"children":"$L6"}]]}]
+3:I[3038,["648","static/chunks/648-9912c3a1609cd4d2.js","440","static/chunks/440-d0a1cb058774c752.js","931","static/chunks/app/page-e33ac23adc82d717.js"],"default",1]
+0:["M0BM2pEcYKFOxe0wZXakm",[[["",{"children":["__PAGE__",{}]},"$undefined","$undefined",true],["",{"children":["__PAGE__",{},[["$L1",["$","$L2",null,{"props":{"params":{},"searchParams":{}},"Component":"$3"}],null],null],null]},[[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/bdcc04a4a62ccaa0.css","precedence":"next","crossOrigin":"$undefined"}]],"$L4"],null],null],["$L5",null]]]]
+4:["$","html",null,{"lang":"$undefined","children":[["$","head",null,{"children":[["$","title",null,{"children":"TreantLab - Cybersecurity Specialists"}]," ",["$","link",null,{"rel":"icon","href":"/static/logo_head.png"}]]}],["$","body",null,{"children":"$L6"}]]}]
 5:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","1",{"charSet":"utf-8"}]]
 1:null
 7:I[9441,["648","static/chunks/648-9912c3a1609cd4d2.js","185","static/chunks/app/layout-ff176ded562745e9.js"],"default"]
