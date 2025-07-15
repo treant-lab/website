@@ -6,9 +6,8 @@ const withNextIntl = createNextIntlPlugin('./i18n.ts');
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
-  // Adicione o basePath com o nome do seu repositório
-  // Exemplo: se seu repositório é 'github.com/usuario/website e o build ta caindo no /docs
-  // basePath: '/NOME-DO-REPO',
+  // O basePath deve ser o nome do seu repositório no GitHub Pages
+  // Se o seu repositório é 'treant-lab/website', o basePath é '/website'
   basePath: '',
   eslint: {
     ignoreDuringBuilds: true,
@@ -19,9 +18,10 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  // Define o diretório de saída para a exportação estática
+  distDir: 'docs',
   // Suas configurações existentes do Next.js (se houver)
   // ...
-  distDir: 'docs', // Define o diretório de saída para a exportação estática
 };
 
 // É CRÍTICO que a sua configuração seja exportada através de withNextIntl
