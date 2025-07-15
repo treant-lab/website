@@ -1,118 +1,448 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Treant Lab</title>
+    <title>TreantLab - Especialistas em Cibersegurança</title>
     <link rel="stylesheet" href="output.app.css" />
+    <style>
+        /* Loader com efeito de glitch realista */
+        .loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #0a0a0a;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+        .loader .glitch {
+            position: relative;
+            overflow: hidden;
+        }
+        .loader .glitch img {
+            position: relative;
+            z-index: 1;
+            display: block;
+            width: 200px;
+            animation: sway 2.5s ease-in-out infinite alternate, colorShift 5s infinite linear;
+        }
+        .loader .glitch__layers {
+            position: absolute;
+            z-index: 2;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+        }
+        .loader .glitch__layer {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            background-image: url('static/logo_head.png');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 200px;
+            animation: colorShift 5s infinite linear;
+        }
+        .loader .glitch__layer:nth-child(1) {
+            transform: translateX(-4%);
+            animation: glitch-anim-1 2s infinite linear alternate;
+        }
+        .loader .glitch__layer:nth-child(2) {
+            transform: translateX(2%) translateY(2%);
+            animation: glitch-anim-2 2.3s -0.6s infinite linear alternate;
+        }
+        .loader .glitch__layer:nth-child(3) {
+            transform: translateX(4%);
+            animation: glitch-anim-flash 1.2s infinite linear;
+        }
+        @keyframes sway {
+            0% { transform: rotate(-1.5deg); }
+            100% { transform: rotate(1.5deg); }
+        }
+        @keyframes glitch-anim-1 {
+            0% { clip-path: polygon(0 0%, 100% 0%, 100% 4%, 0 4%); }
+            10% { clip-path: polygon(0 12%, 100% 12%, 100% 12%, 0 12%); }
+            20% { clip-path: polygon(0 8%, 100% 8%, 100% 16%, 0 16%); }
+            30% { clip-path: polygon(0 2%, 100% 2%, 100% 3%, 0 3%); }
+            40% { clip-path: polygon(0 30%, 100% 30%, 100% 30%, 0 30%); }
+            50% { clip-path: polygon(0 40%, 100% 40%, 100% 41%, 0 41%); }
+            60% { clip-path: polygon(0 45%, 100% 45%, 100% 65%, 0 65%); }
+            70% { clip-path: polygon(0 65%, 100% 65%, 100% 65%, 0 65%); }
+            80% { clip-path: polygon(0 75%, 100% 75%, 100% 75%, 0 75%); }
+            90% { clip-path: polygon(0 45%, 100% 45%, 100% 50%, 0 50%); }
+            100% { clip-path: polygon(0 55%, 100% 55%, 100% 65%, 0 65%); }
+        }
+        @keyframes glitch-anim-2 {
+            0% { clip-path: polygon(0 12%, 100% 12%, 100% 25%, 0 25%); }
+            15% { clip-path: polygon(0 5%, 100% 5%, 100% 5%, 0 5%); }
+            25% { clip-path: polygon(0 6%, 100% 6%, 100% 15%, 0 15%); }
+            30% { clip-path: polygon(0 18%, 100% 18%, 100% 18%, 0 18%); }
+            45% { clip-path: polygon(0 40%, 100% 40%, 100% 40%, 0 40%); }
+            50% { clip-path: polygon(0 45%, 100% 45%, 100% 52%, 0 52%); }
+            65% { clip-path: polygon(0 55%, 100% 55%, 100% 55%, 0 55%); }
+            75% { clip-path: polygon(0 75%, 100% 75%, 100% 75%, 0 75%); }
+            80% { clip-path: polygon(0 35%, 100% 35%, 100% 55%, 0 55%); }
+            95% { clip-path: polygon(0 40%, 100% 40%, 100% 55%, 0 55%); }
+            100% { clip-path: polygon(0 10%, 100% 10%, 100% 13%, 0 13%); }
+        }
+        @keyframes glitch-anim-flash {
+            0% { opacity: 0.15; }
+            30%, 100% { opacity: 0; }
+        }
+        @keyframes colorShift {
+            0% { filter: hue-rotate(0deg); }
+            25% { filter: hue-rotate(15deg); }
+            50% { filter: hue-rotate(30deg); }
+            75% { filter: hue-rotate(45deg); }
+            100% { filter: hue-rotate(60deg); }
+        }
+        .loader .glitch img,
+        .loader .glitch__layer {
+            animation: colorShift 5s infinite linear;
+        }
+        .loaded .loader {
+            display: none;
+            animation: fadeOut 0.5s forwards;
+        }
+
+        /* Animações */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.7s ease-out forwards;
+        }
+        @keyframes fadeInUp {
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .hover-effect {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .hover-effect:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(34, 181, 115, 0.2);
+        }
+        .scroll-trigger {
+            opacity: 0;
+        }
+        .scroll-trigger.in-view {
+            animation: fadeInUp 0.7s ease-out forwards;
+        }
+
+        /* Estilos gerais */
+        body {
+            background: url('static/background.png') no-repeat center center fixed;
+            background-size: cover;
+            color: #e0e0e0;
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1280px;
+            padding: 1.5rem;
+            margin: 0 auto;
+            background: rgba(10, 10, 10, 0.8); /* Overlay para legibilidade */
+        }
+        .service-card {
+            background: #fff;
+            color: #000;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            padding: 0.5rem;
+            max-height: 220px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: all 0.3s ease;
+        }
+        .service-card:hover {
+            background: #f0f0f0;
+        }
+        .navbar {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(5px);
+        }
+        .divider {
+            border: 0;
+            height: 1px;
+            background: #333;
+            margin: 1.5rem 0;
+        }
+        .carousel {
+            overflow: hidden;
+            position: relative;
+            max-width: 80%; /* Limitar largura para seguir padrão */
+            margin: 0 auto 2rem;
+        }
+        .carousel-inner {
+            display: flex;
+            width: 400%;
+            transition: transform 0.6s ease-in-out;
+        }
+        .carousel-inner div {
+            flex: 0 0 25%;
+            padding: 1rem;
+            text-align: center;
+        }
+        .carousel-indicators {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            display: flex;
+            gap: 5px;
+            z-index: 10;
+        }
+        .carousel-indicator {
+            width: 14px; /* Ajustado para w-14 */
+            height: 1px;  /* Ajustado para h-1 */
+            background: rgba(255, 255, 255, 0.3);
+            transition: background 0.3s;
+        }
+        .carousel-indicator.active {
+            background: #22B573; /* Cor ativa baseada no padrão */
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const loader = document.querySelector('.loader');
+            if (loader) {
+                setTimeout(() => {
+                    document.body.classList.add('loaded');
+                }, 2000);
+            }
+
+            const elements = document.querySelectorAll('.scroll-trigger');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('in-view');
+                    }
+                });
+            }, { threshold: 0.1 });
+            elements.forEach(el => observer.observe(el));
+
+            let currentSlide = 0;
+            const carousel = document.querySelector('.carousel-inner');
+            const indicators = document.querySelector('.carousel-indicators');
+            if (carousel && indicators) {
+                function updateIndicators() {
+                    const indicatorItems = indicators.querySelectorAll('.carousel-indicator');
+                    indicatorItems.forEach((ind, idx) => {
+                        ind.classList.toggle('active', idx === currentSlide);
+                    });
+                }
+
+                function nextSlide() {
+                    currentSlide = (currentSlide + 1) % 4;
+                    carousel.style.transform = `translateX(-${currentSlide * 25}%)`;
+                    updateIndicators();
+                }
+                updateIndicators(); // Inicializa os indicadores
+                setInterval(nextSlide, 5000);
+            }
+        });
+    </script>
 </head>
-<body class="text-white">
-    <img src="static/background.png" alt="Background" class="absolute -z-50 w-screen">
+<body>
+    <div class="loader">
+        <div class="glitch">
+            <img src="static/logo_head.png" alt="TreantLab Loader">
+            <div class="glitch__layers">
+                <div class="glitch__layer"></div>
+                <div class="glitch__layer"></div>
+                <div class="glitch__layer"></div>
+            </div>
+        </div>
+    </div>
+
     <section class="m-auto container">
         <header class="flex items-center justify-between py-2">
-            <div class="">
-                <img src="static/logo.svg" alt="Treant Lab">
+            <div>
+                <img src="static/logo.svg" alt="TreantLab Logo">
             </div>
             <nav>
                 <ul class="flex space-x-10 p-4 items-center">
-                    <li>Inicio</li>
-                    <li>Servicos</li>
-                    <li>Quem Somos</li>
-                    <li>Contato</li>
-                    <li class="bg-[#22B573] px-4 py-2 rounded-full">Quero me tornar parceiro</li>
+                    <li><a href="#home" class="hover-effect text-gray-300 hover:text-white px-4 py-2">Inicio</a></li>
+                    <li><a href="#offerings" class="hover-effect text-gray-300 hover:text-white px-4 py-2">Servicos</a></li>
+                    <li><a href="#approach" class="hover-effect text-gray-300 hover:text-white px-4 py-2">Quem Somos</a></li>
+                    <li><a href="#contact" class="hover-effect text-gray-300 hover:text-white px-4 py-2">Contato</a></li>
+                    <li class="bg-[#22B573] px-4 py-2 rounded-full"><a href="#partnership" class="hover-effect text-white">Quero me tornar parceiro</a></li>
                 </ul>
             </nav>
         </header>
 
-        <div class="mt-8 flex items-start justify-between">
-            <div class="flex flex-col flex-1">
-                <div class="flex space-x-4 mb-4">
-                    <div class="w-14 h-1 bg-[#22B573] rounded"></div>
-                    <div class="w-14 h-1 bg-white/20 rounded"></div>
-                    <div class="w-14 h-1 bg-white/20 rounded"></div>
-                    <div class="w-14 h-1 bg-white/20 rounded"></div>
+        <div id="home" class="mt-8 py-40 fade-in px-4">
+            <div class="flex items-start justify-between mb-10">
+            <div class="carousel w-full overflow-hidden relative">
+                <div class="carousel-inner flex">
+                    <div class="w-1/4 p-6 text-center">
+                        <div class="bg-gradient-to-r from-white to-gray-400 inline-block text-transparent bg-clip-text font-semibold text-lg">
+                            SEGURANÇA EXTERNA
+                        </div>
+                        <div class="text-4xl font-bold">
+                            <span class="text-[#22B573]">Pentest</span> All Box
+                        </div>
+                        <p class="text-gray-300 text-lg mt-3">
+                            Proteja sua empresa com simulações realistas de ataques cibernéticos. Nossos especialistas realizam testes de penetração para identificar e corrigir vulnerabilidades.
+                        </p>
+                    </div>
+                    <div class="w-1/4 p-6 text-center">
+                        <div class="bg-gradient-to-r from-white to-gray-400 inline-block text-transparent bg-clip-text font-semibold text-lg">
+                            SEGURANÇA EXTERNA
+                        </div>
+                        <div class="text-4xl font-bold">
+                            <span class="text-[#22B573]">Pentest</span> All Box
+                        </div>
+                        <p class="text-gray-300 text-lg mt-3">
+                            Proteja sua empresa com simulações realistas de ataques cibernéticos. Nossos especialistas realizam testes de penetração para identificar e corrigir vulnerabilidades.
+                        </p>
+                    </div>
+                    <div class="w-1/4 p-6 text-center">
+                        <div class="bg-gradient-to-r from-white to-gray-400 inline-block text-transparent bg-clip-text font-semibold text-lg">
+                            SEGURANÇA EXTERNA
+                        </div>
+                        <div class="text-4xl font-bold">
+                            <span class="text-[#22B573]">Pentest</span> All Box
+                        </div>
+                        <p class="text-gray-300 text-lg mt-3">
+                            Proteja sua empresa com simulações realistas de ataques cibernéticos. Nossos especialistas realizam testes de penetração para identificar e corrigir vulnerabilidades.
+                        </p>
+                    </div>
+                    <div class="w-1/4 p-6 text-center">
+                        <div class="bg-gradient-to-r from-white to-gray-400 inline-block text-transparent bg-clip-text font-semibold text-lg">
+                            SEGURANÇA EXTERNA
+                        </div>
+                        <div class="text-4xl font-bold">
+                            <span class="text-[#22B573]">Pentest</span> All Box
+                        </div>
+                        <p class="text-gray-300 text-lg mt-3">
+                            Proteja sua empresa com simulações realistas de ataques cibernéticos. Nossos especialistas realizam testes de penetração para identificar e corrigir vulnerabilidades.
+                        </p>
+                    </div>
                 </div>
-                <div>
-                    <div class="bg-gradient-to-r from-white to-gray-400 inline-block text-transparent bg-clip-text font-semibold text-lg">
-                        SEGURANCA EXTERNA
-                    </div>
-                    <div class="text-6xl font-bold">
-                        <span class="text-[#22B573]">Pentest</span> All Box
-                    </div>
-                    <div class="mt-3">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo consectetur repudiandae animi pariatur facilis doloremque reprehenderit ab! Libero delectus, laborum quia eveniet sint maiores expedita accusamus, vitae saepe consectetur ipsam?
-                    </div>
-                </div>
-
-                <div class="flex space-x-6 mt-4">
-                    <div class="bg-[#22B573] px-4 py-2 rounded-full">Fale com especialista</div>
-                    <div class="border border-[#22B573] px-4 py-2 rounded-full">Conhecer nossos servicos</div>
+                <div class="carousel-indicators">
+                    <div class="carousel-indicator active"></div>
+                    <div class="carousel-indicator"></div>
+                    <div class="carousel-indicator"></div>
+                    <div class="carousel-indicator"></div>
                 </div>
             </div>
-
-            <div class="flex flex-1 justify-center">
-                <img src="static/first_banner.svg" alt="Primeiro banner">
+            <div class="w-1/2 flex justify-end">
+                <div class="flex flex-1 justify-center">
+                    <img src="static/first_banner.svg" alt="Primeiro banner" class="max-w-full h-auto">
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="m-auto container flex items-start justify-between bg-white">
-        <div class="flex flex-row flex-1">
-           <div class="grid grid-cols-2 gap-8">
-                <div class="bg-white text-black flex flex-col items-start p-4 rounded shadow">
-                    <div class="w-full flex flex-1 justify-center">
-                        <img class="w-32 mt-5" src="static/pentest_icon.svg" alt="">
-                    </div>
-                    <div class="font-semibold">Pentest</div>
-                    <div class="text-sm text-gray-500">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia iusto nulla modi quos et eaque, laudantium corporis ut minima repudiandae. Eius minima molestias voluptatibus possimus aliquid eaque neque nisi architecto.</div>
+    <section id="offerings" class="m-auto container py-40 fade-in">
+        <div class="grid grid-cols-2 gap-8">
+            <div class="bg-white text-black flex flex-col items-start p-4 rounded shadow service-card scroll-trigger">
+                <div class="w-full flex flex-1 justify-center">
+                    <img class="w-32 mt-5" src="static/pentest_icon.svg" alt="">
                 </div>
-                <div class="bg-white text-black flex flex-col items-start p-4 rounded shadow">
-                    <div class="w-full flex flex-1 justify-center">
-                        <img class="w-32 mt-5" src="static/threat_icon.svg" alt="">
-                    </div>
-                    <div class="font-semibold">Threat Inteligence</div>
-                    <div class="text-sm text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque aspernatur accusamus alias et, mollitia eveniet totam amet a placeat quos libero eaque, vero exercitationem qui odit adipisci ipsa labore nemo.</div>
+                <div class="font-semibold">Pentest</div>
+                <div class="text-sm text-gray-500">Testes de penetração sob demanda para identificar e corrigir vulnerabilidades em redes e sistemas.</div>
+            </div>
+            <div class="bg-white text-black flex flex-col items-start p-4 rounded shadow service-card scroll-trigger">
+                <div class="w-full flex flex-1 justify-center">
+                    <img class="w-32 mt-5" src="static/threat_icon.svg" alt="">
                 </div>
-                <div class="bg-white text-black flex flex-col items-start p-4 rounded shadow">
-                    <div class="w-full flex flex-1 justify-center">
-                        <img class="w-32 mt-5" src="static/development_icon.svg" alt="">
-                    </div>
-                    <div class="font-semibold">Desenvolvimento</div>
-                    <div class="text-sm text-gray-500">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia iusto nulla modi quos et eaque, laudantium corporis ut minima repudiandae. Eius minima molestias voluptatibus possimus aliquid eaque neque nisi architecto.</div>
+                <div class="font-semibold">Threat Intelligence</div>
+                <div class="text-sm text-gray-500">Pesquisa avançada para antecipar e mitigar ameaças emergentes com dados globais.</div>
+            </div>
+            <div class="bg-white text-black flex flex-col items-start p-4 rounded shadow service-card scroll-trigger">
+                <div class="w-full flex flex-1 justify-center">
+                    <img class="w-32 mt-5" src="static/development_icon.svg" alt="">
                 </div>
-                <div class="bg-white text-black flex flex-col items-start p-4 rounded shadow">
-                    <div class="w-full flex flex-1 justify-center">
-                        <img class="w-32 mt-5" src="static/training_icon.svg" alt="">
-                    </div>
-                    <div class="font-semibold">Treinamento</div>
-                    <div class="text-sm text-gray-500">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia iusto nulla modi quos et eaque, laudantium corporis ut minima repudiandae. Eius minima molestias voluptatibus possimus aliquid eaque neque nisi architecto.</div>
+                <div class="font-semibold">Desenvolvimento</div>
+                <div class="text-sm text-gray-500">Integração de segurança no ciclo de desenvolvimento para aplicações robustas.</div>
+            </div>
+            <div class="bg-white text-black flex flex-col items-start p-4 rounded shadow service-card scroll-trigger">
+                <div class="w-full flex flex-1 justify-center">
+                    <img class="w-32 mt-5" src="static/training_icon.svg" alt="">
                 </div>
-           </div>
+                <div class="font-semibold">Treinamento</div>
+                <div class="text-sm text-gray-500">Treinamentos personalizados para fortalecer equipes contra ciberameaças.</div>
+            </div>
         </div>
-
-        <div class="flex flex-col flex-1 text-black py-40 px-10">
-            <div class="font-bold text-3xl mb-4">
-                E muito mais
-            </div>
-            <div class="text-gray-400 font-light mb-6">
-                Somos especialistas em segurança, atuamos em áreas diversas e etc. Consulte nossos especialistas e encontre um serviço personalizado para o que a sua empresa deseja. Consulte nossos especialistas e encontre um serviço personalizado para o que a sua empresa deseja. Consulte nossos especialistas e encontre um serviço personalizado para o que a sua empresa deseja
-            </div>
-            <div class="border border-[#22B573] px-4 py-2 rounded-full w-64 text-center font-semibold">Quero conhecer os servicos</div>
+        <div class="mt-12 text-center">
+            <h2 class="text-3xl font-bold mb-4 text-[#22B573]">E muito mais</h2>
+            <p class="text-gray-400 mb-6 max-w-prose mx-auto">Oferecemos serviços adicionais como estruturação de SOC e consultoria em conformidade. Entre em contato para soluções personalizadas.</p>
+            <a href="#contact" class="border border-[#22B573] px-4 py-2 rounded-full w-64 text-center font-semibold hover-effect text-gray-300">Quero conhecer os serviços</a>
+            <img src="static/icon1.png" alt="Icon" class="mt-4 h-16 mx-auto">
+            <div class="mt-4 bg-gradient-to-r from-gray-700 to-transparent h-1 w-1/4 mx-auto"></div>
         </div>
     </section>
 
-    <section class="mt-28 m-auto container bg-[#1E1E1E] rounded-xl flex justify-between items-center">
-        <div class="px-40 w-1/2">
-            <div class="px-6 text-2xl font-semibold mb-2">Somos consultores</div>
-            <div class="border-l-4 px-6 border-[#22B573] w-full">Somos especialista em Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe necessitatibus repellendus expedita non ipsam. Distinctio et earum cupiditate, voluptatum assumenda quod explicabo, nulla eius omnis ipsam, laborum dolorum similique voluptate.</div>
+    <section id="approach" class="mt-28 m-auto container bg-[#1E1E1E] rounded-xl py-40 fade-in">
+        <div class="flex items-center justify-between">
+            <div class="px-10 w-1/2">
+                <div class="text-2xl font-semibold mb-2">Somos consultores</div>
+                <div class="border-l-4 border-[#22B573] pl-4">Somos especialistas em segurança cibernética, oferecendo soluções personalizadas como pentests e treinamentos para proteger sua empresa de forma inovadora.</div>
+            </div>
+            <div class="w-1/2 flex justify-end">
+                <img src="static/second_banner.png" alt="Segundo banner" class="max-w-full h-auto">
+            </div>
         </div>
-    
-        <div class="-mt-28">
-            <img src="static/second_banner.png" alt="Segundo banner">
+        <div class="mt-8 bg-gradient-to-r from-[#22B573] to-transparent h-2 w-1/3 mx-auto rounded"></div>
+    </section>
+
+    <section id="contact" class="py-40 m-auto container bg-gray-900 fade-in">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold mb-10 text-center text-[#22B573]">Entre em Contato</h2>
+            <form action="#" method="post" class="max-w-lg mx-auto bg-gray-800 p-8 rounded-lg shadow-md transition-all duration-300 hover:shadow-lg">
+                <div class="mb-6">
+                    <label for="name" class="block mb-2 text-gray-300">Nome</label>
+                    <input type="text" id="name" name="name" class="w-full p-3 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#22B573] bg-gray-700 text-white transition-all duration-200 focus:shadow-inner">
+                </div>
+                <div class="mb-6">
+                    <label for="email" class="block mb-2 text-gray-300">Email</label>
+                    <input type="email" id="email" name="email" class="w-full p-3 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#22B573] bg-gray-700 text-white transition-all duration-200 focus:shadow-inner">
+                </div>
+                <div class="mb-6">
+                    <label for="company" class="block mb-2 text-gray-300">Empresa (opcional)</label>
+                    <input type="text" id="company" name="company" class="w-full p-3 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#22B573] bg-gray-700 text-white transition-all duration-200 focus:shadow-inner">
+                </div>
+                <div class="mb-6">
+                    <label for="inquiry-type" class="block mb-2 text-gray-300">Tipo de Consulta</label>
+                    <select id="inquiry-type" name="inquiry-type" class="w-full p-3 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#22B573] bg-gray-700 text-white transition-all duration-200 focus:shadow-inner">
+                        <option value="general">Consulta Geral</option>
+                        <option value="service">Consulta sobre Serviços</option>
+                        <option value="partnership">Parceria</option>
+                        <option value="career">Oportunidades de Carreira</option>
+                    </select>
+                </div>
+                <div class="mb-8">
+                    <label for="message" class="block mb-2 text-gray-300">Mensagem</label>
+                    <textarea id="message" name="message" rows="6" class="w-full p-3 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#22B573] bg-gray-700 text-white transition-all duration-200 focus:shadow-inner"></textarea>
+                </div>
+                <button type="submit" class="bg-[#22B573] text-white px-6 py-3 rounded-lg hover-effect w-full font-semibold transition-all duration-300 hover:bg-[#1a8c58]">Enviar</button>
+            </form>
+            <div class="mt-8 bg-gradient-to-l from-gray-700 to-transparent h-2 w-1/3 mx-auto rounded"></div>
         </div>
     </section>
 
-    
-
+    <footer class="bg-gray-900 text-gray-400 py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p>© 2025 TreantLab. All rights reserved.</p>
+            <nav class="mt-4">
+                <ul class="flex justify-center space-x-6">
+                    <li><a href="#" class="hover:text-gray-200 transition-colors duration-300">Privacy Policy</a></li>
+                    <li><a href="#" class="hover:text-gray-200 transition-colors duration-300">Terms of Use</a></li>
+                    <li><a href="#contact" class="hover:text-gray-200 transition-colors duration-300">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
 </body>
 </html>

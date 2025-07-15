@@ -1,0 +1,89 @@
+{
+  "Navigation": {
+    "home": "Home",
+    "services": "Services",
+    "about": "About",
+    "contact": "Contact",
+    "request_quote": "Request a Quote"
+  },
+  "Hero": {
+    "category_leader": "Cybersecurity Leaders",
+    "title_part1": "We Protect Your",
+    "highlight": "Digital Future",
+    "description": "Cybersecurity specialists offering advanced pentest, threat intelligence, and strategic consulting solutions for companies that take security seriously.",
+    "schedule_consultation": "Schedule a Consultation",
+    "view_portfolio": "View Portfolio"
+  },
+  "Stats": {
+    "vulnerabilities_found": "Vulnerabilities Found",
+    "soc_uptime": "SOC - Guaranteed Uptime",
+    "monitoring": "Monitoring",
+    "response_time": "Response Time"
+  },
+  "Services": {
+    "our_services": "Our Services",
+    "complete_solutions": "Complete Cybersecurity Solutions",
+    "description": "We offer a comprehensive portfolio of specialized services to protect your organization against the most sophisticated threats.",
+    "advanced_pentest_title": "Advanced Pentest",
+    "advanced_pentest_description": "Complete penetration tests with OWASP and NIST methodologies, including code and infrastructure analysis.",
+    "advanced_pentest_features": ["Black Box Testing", "White Box Testing", "Red Team Operations", "Executive Reports"],
+    "threat_intelligence_title": "Threat Intelligence",
+    "threat_intelligence_description": "Real-time threat intelligence with 24/7 monitoring and predictive risk analysis.",
+    "threat_intelligence_features": ["Dark Web Monitoring", "IOC Analysis", "Threat Hunting", "Custom Reports"],
+    "devsecops_title": "DevSecOps",
+    "devsecops_description": "Integration of security into the development cycle with automation and secure code practices.",
+    "devsecops_features": ["SAST/DAST", "Container Security", "CI/CD Security", "Code Review"],
+    "specialized_training_title": "Specialized Training",
+    "specialized_training_description": "Advanced technical training for IT and development teams with recognized certifications.",
+    "specialized_training_features": ["Ethical Hacking", "Secure Coding", "Incident Response", "Compliance Training"],
+    "and_much_more_title": "And much more",
+    "and_much_more_description": "We offer additional services such as SOC structuring and compliance consulting. Contact us for customized solutions.",
+    "know_services": "I want to know the services"
+  },
+  "About": {
+    "who_we_are": "Who We Are",
+    "specialists_title": "Digital Security Specialists",
+    "description": "We are a team of certified cybersecurity specialists, with over a decade of experience protecting organizations against advanced digital threats.",
+    "international_experience": "International experience in over 20 countries",
+    "certifications": "CISSP, CEH, OSCP, and ISO 27001 Certifications",
+    "incident_response": "Incident response in less than 15 minutes",
+    "years_experience": "Years of Experience",
+    "specialists": "Specialists",
+    "satisfaction": "Satisfaction",
+    "support": "Support"
+  },
+  "Testimonials": {
+    "testimonials": "Testimonials",
+    "what_clients_say": "What our clients say"
+  },
+  "Contact": {
+    "contact_us": "Contact Us",
+    "protect_business_together": "Let's protect your business together",
+    "description": "Schedule a free consultation and discover how we can strengthen your organization's security.",
+    "name": "Name",
+    "email": "Email",
+    "company": "Company",
+    "consultation_type": "Consultation Type",
+    "select_consultation_type": "Select consultation type",
+    "message": "Message",
+    "message_placeholder": "Describe your security needs...",
+    "send_message": "Send Message",
+    "consultation_types": {
+      "pentest": "Pentest",
+      "threat_intelligence": "Threat Intelligence",
+      "devsecops": "DevSecOps",
+      "training": "Training",
+      "general": "General Consultation"
+    }
+  },
+  "Footer": {
+    "privacy_policy": "Privacy Policy",
+    "terms_of_use": "Terms of Use",
+    "cookie_policy": "Cookie Policy",
+    "contact": "Contact",
+    "phone": "Phone: +55 15 99698-8717",
+    "email": "Email: contato@treantlab.org",
+    "cnpj": "CNPJ: 61.618.812/0001-90",
+    "copyright": "© {year} TreantLab. All rights reserved. Cybersecurity Specialists."
+  }
+}
