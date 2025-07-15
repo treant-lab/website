@@ -592,7 +592,7 @@ export default function TreantLabPage() {
                 </div>
                 <div className="flex items-center space-x-3">
                   <Lock className="w-6 h-6 text-emerald-400" />
-                  <span>Certificações CISSP, CEH, OSCP e ISO 27001</span>
+                  <span>Certificações CRTO, CEH, OSCP e ISO 27001</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Zap className="w-6 h-6 text-emerald-400" />

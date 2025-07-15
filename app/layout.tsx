@@ -14,6 +14,9 @@ export default async function LocaleLayout({ children, params: { locale } }: Pro
 
   return (
     <html lang={locale}>
+      <head>
+        <link rel="icon" href="/static/logo_head.png" />
+      </head>
       <body>
         <NextIntlClientProvider messages={messages}>{children}</NextIntlClientProvider>
       </body>

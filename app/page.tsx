@@ -602,9 +602,6 @@ export default function TreantLabPage() {
             >
               {t("Services.know_services")}
             </Button>
-            <div className="flex justify-center mb-6">
-              <Image src="/static/icon1.png" alt="Icon" width={64} height={64} className="h-16 w-16" />
-            </div>
             <div className="bg-gradient-to-r from-emerald-600 to-transparent h-1 w-1/4 mx-auto rounded"></div>
           </motion.div>
         </div>
