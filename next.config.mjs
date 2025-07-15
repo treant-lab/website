@@ -8,7 +8,7 @@ const nextConfig = {
   output: 'export',
   // O basePath deve ser o nome do seu repositório no GitHub Pages
   // Se o seu repositório é 'treant-lab/website', o basePath é '/website'
-  basePath: '/website',
+  basePath: '/website/docs',
   eslint: {
     ignoreDuringBuilds: true,
   },
