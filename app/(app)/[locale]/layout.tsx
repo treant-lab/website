@@ -1,10 +1,14 @@
 import type { ReactNode } from "react"
 import type { Metadata, Viewport } from "next"
 import { NextIntlClientProvider } from "next-intl"
-import { getMessages, setRequestLocale } from "next-intl/server"
+import { setRequestLocale } from "next-intl/server"
 import { Inter } from "next/font/google"
-import { locales } from "@/i18n"
+import { locales, type Locale } from "@/i18n"
 import "../../globals.css"
+
+async function getMessagesForLocale(locale: Locale) {
+  return (await import(`@/messages/${locale}.json`)).default
+}
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -66,7 +70,7 @@ type Props = {
 export default async function LocaleLayout({ children, params: { locale } }: Props) {
   // Enable static rendering
   setRequestLocale(locale)
-  const messages = await getMessages()
+  const messages = await getMessagesForLocale(locale as Locale)
 
   return (
     <html lang={locale} className="scroll-smooth">
