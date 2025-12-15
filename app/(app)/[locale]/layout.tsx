@@ -1,7 +1,7 @@
 import type { ReactNode } from "react"
 import type { Metadata, Viewport } from "next"
 import { NextIntlClientProvider } from "next-intl"
-import { getMessages } from "next-intl/server"
+import { getMessages, setRequestLocale } from "next-intl/server"
 import { Inter } from "next/font/google"
 import { locales } from "@/i18n"
 import "../../globals.css"
@@ -64,6 +64,7 @@ type Props = {
 }
 
 export default async function LocaleLayout({ children, params: { locale } }: Props) {
+  setRequestLocale(locale);
   const messages = await getMessages()
 
   return (

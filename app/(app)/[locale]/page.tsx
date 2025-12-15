@@ -500,9 +500,8 @@ export default function TreantLabPage() {
                     {servicesData.map((service, index) => (
                       <motion.div
                         key={index}
-                        className={`p-4 rounded-lg transition-all duration-500 cursor-pointer ${
-                          index === currentSlide ? "bg-emerald-600/20 border border-emerald-600/50" : "bg-gray-800/50"
-                        }`}
+                        className={`p-4 rounded-lg transition-all duration-500 cursor-pointer ${index === currentSlide ? "bg-emerald-600/20 border border-emerald-600/50" : "bg-gray-800/50"
+                          }`}
                         animate={{
                           scale: index === currentSlide ? 1.05 : 1,
                           opacity: index === currentSlide ? 1 : 0.7,
@@ -611,13 +610,13 @@ export default function TreantLabPage() {
                     </CardHeader>
                     <CardContent>
                       <ul className="space-y-2">
-                      {service.featuresKeys.map((featureKey, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center space-x-2">
-                          <CheckCircle className="w-5 h-5 text-emerald-400" />
-                          <span className="text-gray-300">{t(featureKey)}</span>
-                        </li>
-                      ))}
-                    </ul>
+                        {service.featuresKeys.map((featureKey, featureIndex) => (
+                          <li key={featureIndex} className="flex items-center space-x-2">
+                            <CheckCircle className="w-5 h-5 text-emerald-400" />
+                            <span className="text-gray-300">{t(featureKey)}</span>
+                          </li>
+                        ))}
+                      </ul>
                     </CardContent>
                   </Card>
                 </TiltCard>

@@ -1,0 +1,195 @@
+
+> my-v0-project@0.1.0 build
+> next build
+
+  Γû▓ Next.js 14.2.16
+
+   Creating an optimized production build ...
+
+warn - The glob pattern ./styles/**/*.{css} in your Tailwind CSS configuration is invalid.
+warn - Update it to ./styles/**/*.css to silence this warning.
+ Γ£ô Compiled successfully
+   Skipping validation of types
+   Skipping linting
+   Collecting page data ...
+   Generating static pages (0/6) ...
+   Generating static pages (1/6) 
+   Generating static pages (2/6) 
+i18n params received: { locale: undefined, requestLocale: [Getter] }
+Using requestLocale promise
+n [Error]: Route /en/ with `dynamic = "error"` couldn't be rendered statically because it used `headers`. See more info here: https://nextjs.org/docs/app/building-your-application/rendering/static-and-dynamic#dynamic-rendering
+    at s (D:\treant\website\.next\server\chunks\220.js:2:50006)
+    at d (D:\treant\website\.next\server\app\(app)\[locale]\page.js:20:54763)
+    at D:\treant\website\.next\server\app\(app)\[locale]\page.js:20:48366
+    at D:\treant\website\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:185364
+    at D:\treant\website\.next\server\app\(app)\[locale]\page.js:20:48443
+    at D:\treant\website\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:185364
+    at E (D:\treant\website\.next\server\app\(app)\[locale]\page.js:20:48977)
+    at get requestLocale (D:\treant\website\.next\server\app\(app)\[locale]\page.js:20:49182)
+    at s (D:\treant\website\.next\server\app\(app)\[locale]\page.js:20:53024)
+    at D:\treant\website\.next\server\app\(app)\[locale]\page.js:20:49122 {
+  code: 'NEXT_STATIC_GEN_BAILOUT'
+}
+i18n params received: { locale: undefined, requestLocale: [Getter] }
+Using requestLocale promise
+n [Error]: Route /en/ with `dynamic = "error"` couldn't be rendered statically because it used `headers`. See more info here: https://nextjs.org/docs/app/building-your-application/rendering/static-and-dynamic#dynamic-rendering
+    at s (D:\treant\website\.next\server\chunks\220.js:2:50006)
+    at d (D:\treant\website\.next\server\app\(app)\[locale]\page.js:20:54763)
+    at D:\treant\website\.next\server\app\(app)\[locale]\page.js:20:48366
+    at D:\treant\website\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:185364
+    at D:\treant\website\.next\server\app\(app)\[locale]\page.js:20:48443
+    at D:\treant\website\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:185364
+    at E (D:\treant\website\.next\server\app\(app)\[locale]\page.js:20:48977)
+    at get requestLocale (D:\treant\website\.next\server\app\(app)\[locale]\page.js:20:49182)
+    at s (D:\treant\website\.next\server\app\(app)\[locale]\page.js:20:53024)
+    at D:\treant\website\.next\server\app\(app)\[locale]\page.js:20:49122 {
+  code: 'NEXT_STATIC_GEN_BAILOUT'
+}
+n [Error]: Route /en/ with `dynamic = "error"` couldn't be rendered statically because it used `headers`. See more info here: https://nextjs.org/docs/app/building-your-application/rendering/static-and-dynamic#dynamic-rendering
+    at s (D:\treant\website\.next\server\chunks\220.js:2:50006)
+    at d (D:\treant\website\.next\server\app\(app)\[locale]\page.js:20:54763)
+    at D:\treant\website\.next\server\app\(app)\[locale]\page.js:20:48366
+    at D:\treant\website\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:185364
+    at D:\treant\website\.next\server\app\(app)\[locale]\page.js:20:48443
+    at D:\treant\website\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:185364
+    at E (D:\treant\website\.next\server\app\(app)\[locale]\page.js:20:48977)
+    at get requestLocale (D:\treant\website\.next\server\app\(app)\[locale]\page.js:20:49182)
+    at s (D:\treant\website\.next\server\app\(app)\[locale]\page.js:20:53024)
+    at D:\treant\website\.next\server\app\(app)\[locale]\page.js:20:49122 {
+  code: 'NEXT_STATIC_GEN_BAILOUT',
+  digest: '2064792467'
+}
+n [Error]: Route /en/ with `dynamic = "error"` couldn't be rendered statically because it used `headers`. See more info here: https://nextjs.org/docs/app/building-your-application/rendering/static-and-dynamic#dynamic-rendering
+    at s (D:\treant\website\.next\server\chunks\220.js:2:50006)
+    at d (D:\treant\website\.next\server\app\(app)\[locale]\page.js:20:54763)
+    at D:\treant\website\.next\server\app\(app)\[locale]\page.js:20:48366
+    at D:\treant\website\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:185364
+    at D:\treant\website\.next\server\app\(app)\[locale]\page.js:20:48443
+    at D:\treant\website\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:185364
+    at E (D:\treant\website\.next\server\app\(app)\[locale]\page.js:20:48977)
+    at get requestLocale (D:\treant\website\.next\server\app\(app)\[locale]\page.js:20:49182)
+    at s (D:\treant\website\.next\server\app\(app)\[locale]\page.js:20:53024)
+    at D:\treant\website\.next\server\app\(app)\[locale]\page.js:20:49122 {
+  code: 'NEXT_STATIC_GEN_BAILOUT',
+  digest: '2064792467'
+}
+n [Error]: Route /en/ with `dynamic = "error"` couldn't be rendered statically because it used `headers`. See more info here: https://nextjs.org/docs/app/building-your-application/rendering/static-and-dynamic#dynamic-rendering
+    at s (D:\treant\website\.next\server\chunks\220.js:2:50006)
+    at d (D:\treant\website\.next\server\app\(app)\[locale]\page.js:20:54763)
+    at D:\treant\website\.next\server\app\(app)\[locale]\page.js:20:48366
+    at D:\treant\website\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:185364
+    at D:\treant\website\.next\server\app\(app)\[locale]\page.js:20:48443
+    at D:\treant\website\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:185364
+    at E (D:\treant\website\.next\server\app\(app)\[locale]\page.js:20:48977)
+    at get requestLocale (D:\treant\website\.next\server\app\(app)\[locale]\page.js:20:49182)
+    at s (D:\treant\website\.next\server\app\(app)\[locale]\page.js:20:53024)
+    at D:\treant\website\.next\server\app\(app)\[locale]\page.js:20:49122 {
+  code: 'NEXT_STATIC_GEN_BAILOUT',
+  digest: '2064792467'
+}
+
+Error occurred prerendering page "/en". Read more: https://nextjs.org/docs/messages/prerender-error
+
+Error: Route /en/ with `dynamic = "error"` couldn't be rendered statically because it used `headers`. See more info here: https://nextjs.org/docs/app/building-your-application/rendering/static-and-dynamic#dynamic-rendering
+    at s (D:\treant\website\.next\server\chunks\220.js:2:50006)
+    at d (D:\treant\website\.next\server\app\(app)\[locale]\page.js:20:54763)
+    at D:\treant\website\.next\server\app\(app)\[locale]\page.js:20:48366
+    at D:\treant\website\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:185364
+    at D:\treant\website\.next\server\app\(app)\[locale]\page.js:20:48443
+    at D:\treant\website\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:185364
+    at E (D:\treant\website\.next\server\app\(app)\[locale]\page.js:20:48977)
+    at get requestLocale (D:\treant\website\.next\server\app\(app)\[locale]\page.js:20:49182)
+    at s (D:\treant\website\.next\server\app\(app)\[locale]\page.js:20:53024)
+    at D:\treant\website\.next\server\app\(app)\[locale]\page.js:20:49122
+i18n params received: { locale: undefined, requestLocale: [Getter] }
+Using requestLocale promise
+n [Error]: Route /pt/ with `dynamic = "error"` couldn't be rendered statically because it used `headers`. See more info here: https://nextjs.org/docs/app/building-your-application/rendering/static-and-dynamic#dynamic-rendering
+    at s (D:\treant\website\.next\server\chunks\220.js:2:50006)
+    at d (D:\treant\website\.next\server\app\(app)\[locale]\page.js:20:54763)
+    at D:\treant\website\.next\server\app\(app)\[locale]\page.js:20:48366
+    at D:\treant\website\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:185364
+    at D:\treant\website\.next\server\app\(app)\[locale]\page.js:20:48443
+    at D:\treant\website\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:185364
+    at E (D:\treant\website\.next\server\app\(app)\[locale]\page.js:20:48977)
+    at get requestLocale (D:\treant\website\.next\server\app\(app)\[locale]\page.js:20:49182)
+    at s (D:\treant\website\.next\server\app\(app)\[locale]\page.js:20:53024)
+    at D:\treant\website\.next\server\app\(app)\[locale]\page.js:20:49122 {
+  code: 'NEXT_STATIC_GEN_BAILOUT'
+}
+i18n params received: { locale: undefined, requestLocale: [Getter] }
+Using requestLocale promise
+n [Error]: Route /pt/ with `dynamic = "error"` couldn't be rendered statically because it used `headers`. See more info here: https://nextjs.org/docs/app/building-your-application/rendering/static-and-dynamic#dynamic-rendering
+    at s (D:\treant\website\.next\server\chunks\220.js:2:50006)
+    at d (D:\treant\website\.next\server\app\(app)\[locale]\page.js:20:54763)
+    at D:\treant\website\.next\server\app\(app)\[locale]\page.js:20:48366
+    at D:\treant\website\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:185364
+    at D:\treant\website\.next\server\app\(app)\[locale]\page.js:20:48443
+    at D:\treant\website\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:185364
+    at E (D:\treant\website\.next\server\app\(app)\[locale]\page.js:20:48977)
+    at get requestLocale (D:\treant\website\.next\server\app\(app)\[locale]\page.js:20:49182)
+    at s (D:\treant\website\.next\server\app\(app)\[locale]\page.js:20:53024)
+    at D:\treant\website\.next\server\app\(app)\[locale]\page.js:20:49122 {
+  code: 'NEXT_STATIC_GEN_BAILOUT'
+}
+n [Error]: Route /pt/ with `dynamic = "error"` couldn't be rendered statically because it used `headers`. See more info here: https://nextjs.org/docs/app/building-your-application/rendering/static-and-dynamic#dynamic-rendering
+    at s (D:\treant\website\.next\server\chunks\220.js:2:50006)
+    at d (D:\treant\website\.next\server\app\(app)\[locale]\page.js:20:54763)
+    at D:\treant\website\.next\server\app\(app)\[locale]\page.js:20:48366
+    at D:\treant\website\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:185364
+    at D:\treant\website\.next\server\app\(app)\[locale]\page.js:20:48443
+    at D:\treant\website\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:185364
+    at E (D:\treant\website\.next\server\app\(app)\[locale]\page.js:20:48977)
+    at get requestLocale (D:\treant\website\.next\server\app\(app)\[locale]\page.js:20:49182)
+    at s (D:\treant\website\.next\server\app\(app)\[locale]\page.js:20:53024)
+    at D:\treant\website\.next\server\app\(app)\[locale]\page.js:20:49122 {
+  code: 'NEXT_STATIC_GEN_BAILOUT',
+  digest: '3399214227'
+}
+n [Error]: Route /pt/ with `dynamic = "error"` couldn't be rendered statically because it used `headers`. See more info here: https://nextjs.org/docs/app/building-your-application/rendering/static-and-dynamic#dynamic-rendering
+    at s (D:\treant\website\.next\server\chunks\220.js:2:50006)
+    at d (D:\treant\website\.next\server\app\(app)\[locale]\page.js:20:54763)
+    at D:\treant\website\.next\server\app\(app)\[locale]\page.js:20:48366
+    at D:\treant\website\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:185364
+    at D:\treant\website\.next\server\app\(app)\[locale]\page.js:20:48443
+    at D:\treant\website\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:185364
+    at E (D:\treant\website\.next\server\app\(app)\[locale]\page.js:20:48977)
+    at get requestLocale (D:\treant\website\.next\server\app\(app)\[locale]\page.js:20:49182)
+    at s (D:\treant\website\.next\server\app\(app)\[locale]\page.js:20:53024)
+    at D:\treant\website\.next\server\app\(app)\[locale]\page.js:20:49122 {
+  code: 'NEXT_STATIC_GEN_BAILOUT',
+  digest: '3399214227'
+}
+n [Error]: Route /pt/ with `dynamic = "error"` couldn't be rendered statically because it used `headers`. See more info here: https://nextjs.org/docs/app/building-your-application/rendering/static-and-dynamic#dynamic-rendering
+    at s (D:\treant\website\.next\server\chunks\220.js:2:50006)
+    at d (D:\treant\website\.next\server\app\(app)\[locale]\page.js:20:54763)
+    at D:\treant\website\.next\server\app\(app)\[locale]\page.js:20:48366
+    at D:\treant\website\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:185364
+    at D:\treant\website\.next\server\app\(app)\[locale]\page.js:20:48443
+    at D:\treant\website\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:185364
+    at E (D:\treant\website\.next\server\app\(app)\[locale]\page.js:20:48977)
+    at get requestLocale (D:\treant\website\.next\server\app\(app)\[locale]\page.js:20:49182)
+    at s (D:\treant\website\.next\server\app\(app)\[locale]\page.js:20:53024)
+    at D:\treant\website\.next\server\app\(app)\[locale]\page.js:20:49122 {
+  code: 'NEXT_STATIC_GEN_BAILOUT',
+  digest: '3399214227'
+}
+
+Error occurred prerendering page "/pt". Read more: https://nextjs.org/docs/messages/prerender-error
+
+Error: Route /pt/ with `dynamic = "error"` couldn't be rendered statically because it used `headers`. See more info here: https://nextjs.org/docs/app/building-your-application/rendering/static-and-dynamic#dynamic-rendering
+    at s (D:\treant\website\.next\server\chunks\220.js:2:50006)
+    at d (D:\treant\website\.next\server\app\(app)\[locale]\page.js:20:54763)
+    at D:\treant\website\.next\server\app\(app)\[locale]\page.js:20:48366
+    at D:\treant\website\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:185364
+    at D:\treant\website\.next\server\app\(app)\[locale]\page.js:20:48443
+    at D:\treant\website\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:185364
+    at E (D:\treant\website\.next\server\app\(app)\[locale]\page.js:20:48977)
+    at get requestLocale (D:\treant\website\.next\server\app\(app)\[locale]\page.js:20:49182)
+    at s (D:\treant\website\.next\server\app\(app)\[locale]\page.js:20:53024)
+    at D:\treant\website\.next\server\app\(app)\[locale]\page.js:20:49122
+   Generating static pages (4/6) 
+ Γ£ô Generating static pages (6/6)
+
+> Export encountered errors on following paths:
+	/(app)/[locale]/page: /en
+	/(app)/[locale]/page: /pt
