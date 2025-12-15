@@ -6,7 +6,8 @@ const withNextIntl = createNextIntlPlugin('./i18n.ts');
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
-  basePath: process.env.NODE_ENV === 'production' ? '/website' : '',
+  output: 'export',
+  // basePath removed for custom domain
   eslint: {
     ignoreDuringBuilds: true,
   },
