@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-gray-200;
+  }
+
+  html,
+  body {
+    @apply bg-black text-white;
+    /* Fundo global fixo para o efeito de paralaxe */
+    background-image: url("/static/background.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Importante para o efeito de paralaxe */
+  }
+}
+
+/* Custom styles for the grid pattern */
+.bg-grid-pattern {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #22b573;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #1a8c58;
+}
+
+/* Remove any conflicting styles */
+.dark {
+  color-scheme: dark;
+}

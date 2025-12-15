@@ -6,9 +6,7 @@ const withNextIntl = createNextIntlPlugin('./i18n.ts');
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
-  // Adicione o basePath com o nome do seu repositório
-  // Exemplo: se seu repositório é 'treantlab-modern', use '/treantlab-modern'
-  basePath: '/website', // <--- ATUALIZE ESTA LINHA COM O NOME DO SEU REPOSITÓRIO
+  basePath: process.env.NODE_ENV === 'production' ? '/website' : '',
   eslint: {
     ignoreDuringBuilds: true,
   },
@@ -17,9 +15,14 @@ const nextConfig = {
   },
   images: {
     unoptimized: true,
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'flagsapi.com',
+      },
+    ],
   },
-  // Suas configurações existentes do Next.js (se houver)
-  // ...
+  trailingSlash: true,
 };
 
 // É CRÍTICO que a sua configuração seja exportada através de withNextIntl

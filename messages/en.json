@@ -76,6 +76,67 @@
       "general": "General Consultation"
     }
   },
+  "Products": {
+    "section_title": "Our Ecosystem",
+    "section_subtitle": "Products and platforms developed by TreantLab",
+    "filter_all": "All",
+    "filter_security": "Security",
+    "filter_fintech": "Fintech",
+    "filter_gaming": "Gaming",
+    "filter_platform": "Platform",
+    "status_production": "Production",
+    "status_beta": "Beta",
+    "items": {
+      "tevi": {
+        "name": "TEVI",
+        "tagline": "Identity Verification Platform",
+        "description": "Complete identity verification platform with facial recognition, document OCR, fraud detection and anti-fraud intelligence.",
+        "features": ["Face Recognition", "Document OCR", "Fraud Detection", "Mobile SDKs", "Age Mismatch", "Device Hygiene"]
+      },
+      "tamandua": {
+        "name": "Tamandua EDR",
+        "tagline": "Endpoint Detection & Response",
+        "description": "Next-generation EDR solution with zero-shot malware detection, behavioral analysis, and automated response.",
+        "features": ["Zero-shot Detection", "Behavioral Analysis", "Attack Graph", "Honeyfiles", "Auto Response"]
+      },
+      "fortress": {
+        "name": "Fortress Exchange",
+        "tagline": "Privacy-focused Crypto Exchange",
+        "description": "Full-stack cryptocurrency exchange with focus on privacy coins. Order book trading and secure wallets.",
+        "features": ["BTC, ETH, XMR, ZEC", "Order Book", "Secure Wallets", "KYC/AML", "Mobile App"]
+      },
+      "guarapay": {
+        "name": "GuaraPay",
+        "tagline": "Fintech Infrastructure",
+        "description": "Complete fintech infrastructure with payment processing, SDKs and secure integration APIs.",
+        "features": ["Payment Processing", "Multi-platform SDKs", "Secure APIs", "Monitoring"]
+      },
+      "restitue": {
+        "name": "Restitue.ai",
+        "tagline": "Tax Credit Recovery SaaS",
+        "description": "SaaS platform for recovering PIS/COFINS tax credits with automated NFe audit and AI assistant.",
+        "features": ["NFe Processing", "Auto Calculation", "AI Assistant", "Reports", "Multi-tenant"]
+      },
+      "pokerzone": {
+        "name": "PokerZone",
+        "tagline": "Online Poker Platform",
+        "description": "Real-time multiplayer poker with tournaments, game rooms and player progression.",
+        "features": ["Multiplayer", "Tournaments", "Player Progression", "Live Updates"]
+      },
+      "kairos": {
+        "name": "Kairos",
+        "tagline": "Binary Options Trading",
+        "description": "Real-time trading platform for binary options, forex and crypto with live charts.",
+        "features": ["Binary Options", "Live Charts", "Mobile Trading", "Instant Payouts"]
+      },
+      "fruit": {
+        "name": "Fruit BaaS",
+        "tagline": "Backend as a Service",
+        "description": "Complete backend infrastructure with Seed, Tree, Soil and Cluster modules for rapid development.",
+        "features": ["Auth & Users", "Database", "File Storage", "API Gateway", "Scalable"]
+      }
+    }
+  },
   "Footer": {
     "privacy_policy": "Privacy Policy",
     "terms_of_use": "Terms of Use",

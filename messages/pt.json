@@ -86,6 +86,67 @@
       "general": "Consulta Geral"
     }
   },
+  "Products": {
+    "section_title": "Nosso Ecossistema",
+    "section_subtitle": "Produtos e plataformas desenvolvidos pela TreantLab",
+    "filter_all": "Todos",
+    "filter_security": "Segurança",
+    "filter_fintech": "Fintech",
+    "filter_gaming": "Gaming",
+    "filter_platform": "Plataforma",
+    "status_production": "Produção",
+    "status_beta": "Beta",
+    "items": {
+      "tevi": {
+        "name": "TEVI",
+        "tagline": "Plataforma de Verificação de Identidade",
+        "description": "Plataforma completa de verificação de identidade com reconhecimento facial, OCR de documentos e detecção de fraudes.",
+        "features": ["Reconhecimento Facial", "OCR de Documentos", "Detecção de Fraudes", "SDKs Mobile", "Age Mismatch", "Device Hygiene"]
+      },
+      "tamandua": {
+        "name": "Tamandua EDR",
+        "tagline": "Detecção e Resposta de Endpoint",
+        "description": "EDR de próxima geração com detecção zero-shot de malware, análise comportamental e resposta automatizada.",
+        "features": ["Detecção Zero-shot", "Análise Comportamental", "Attack Graph", "Honeyfiles", "Resposta Auto"]
+      },
+      "fortress": {
+        "name": "Fortress Exchange",
+        "tagline": "Exchange Crypto Focada em Privacidade",
+        "description": "Exchange de criptomoedas com foco em moedas de privacidade. Order book e carteiras seguras.",
+        "features": ["BTC, ETH, XMR, ZEC", "Order Book", "Carteiras Seguras", "KYC/AML", "App Mobile"]
+      },
+      "guarapay": {
+        "name": "GuaraPay",
+        "tagline": "Infraestrutura Fintech",
+        "description": "Infraestrutura fintech completa com processamento de pagamentos, SDKs e APIs seguras.",
+        "features": ["Processamento de Pagamentos", "SDKs Multi-plataforma", "APIs Seguras", "Monitoramento"]
+      },
+      "restitue": {
+        "name": "Restitue.ai",
+        "tagline": "SaaS de Recuperação de Créditos",
+        "description": "Plataforma SaaS para recuperação de créditos PIS/COFINS com auditoria automatizada de NFe.",
+        "features": ["Processamento NFe", "Cálculo Automático", "Assistente IA", "Relatórios", "Multi-tenant"]
+      },
+      "pokerzone": {
+        "name": "PokerZone",
+        "tagline": "Plataforma de Poker Online",
+        "description": "Poker multiplayer em tempo real com torneios, salas e progressão de jogadores.",
+        "features": ["Multiplayer", "Torneios", "Progressão", "Atualizações Live"]
+      },
+      "kairos": {
+        "name": "Kairos",
+        "tagline": "Trading de Opções Binárias",
+        "description": "Plataforma de trading em tempo real para opções binárias, forex e crypto.",
+        "features": ["Opções Binárias", "Gráficos Live", "Trading Mobile", "Pagamentos Instant"]
+      },
+      "fruit": {
+        "name": "Fruit BaaS",
+        "tagline": "Backend as a Service",
+        "description": "Infraestrutura backend completa com módulos Seed, Tree, Soil e Cluster para desenvolvimento rápido.",
+        "features": ["Auth & Usuários", "Banco de Dados", "Storage", "API Gateway", "Escalável"]
+      }
+    }
+  },
   "Footer": {
     "privacy_policy": "Política de Privacidade",
     "terms_of_use": "Termos de Uso",

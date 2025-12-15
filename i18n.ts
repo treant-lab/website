@@ -1,12 +1,17 @@
+import { notFound } from "next/navigation"
 import { getRequestConfig } from "next-intl/server"
 
+export const locales = ["en", "pt"] as const
+export type Locale = (typeof locales)[number]
+export const defaultLocale: Locale = "pt"
+
 export default getRequestConfig(async ({ locale }) => {
-  // Use o locale fornecido ou 'pt' como fallback.
-  // O ideal é que 'locale' nunca seja undefined se o middleware estiver funcionando.
-  const resolvedLocale = locale ?? "pt"
+  // Validate that the incoming `locale` parameter is valid
+  if (!locales.includes(locale as Locale)) {
+    notFound()
+  }
 
   return {
-    messages: (await import(`./messages/${resolvedLocale}.json`)).default,
-    locale: resolvedLocale, // Adiciona a propriedade 'locale' exigida pelo tipo RequestConfig
+    messages: (await import(`./messages/${locale}.json`)).default,
   }
 })
