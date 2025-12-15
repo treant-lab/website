@@ -7,8 +7,18 @@ export function CustomCursor() {
   const [position, setPosition] = useState({ x: 0, y: 0 })
   const [isPointer, setIsPointer] = useState(false)
   const [isVisible, setIsVisible] = useState(false)
+  const [isTouchDevice, setIsTouchDevice] = useState(false)
+  const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
+    setMounted(true)
+    // Check for touch device only after mount to prevent hydration mismatch
+    setIsTouchDevice('ontouchstart' in window)
+  }, [])
+
+  useEffect(() => {
+    if (isTouchDevice) return
+
     const handleMouseMove = (e: MouseEvent) => {
       setPosition({ x: e.clientX, y: e.clientY })
       setIsVisible(true)
@@ -36,10 +46,10 @@ export function CustomCursor() {
       document.body.removeEventListener('mouseleave', handleMouseLeave)
       document.body.removeEventListener('mouseenter', handleMouseEnter)
     }
-  }, [])
+  }, [isTouchDevice])
 
-  // Don't render on touch devices
-  if (typeof window !== 'undefined' && 'ontouchstart' in window) {
+  // Don't render until mounted or on touch devices
+  if (!mounted || isTouchDevice) {
     return null
   }
 

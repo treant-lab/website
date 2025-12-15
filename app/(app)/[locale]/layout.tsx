@@ -64,7 +64,8 @@ type Props = {
 }
 
 export default async function LocaleLayout({ children, params: { locale } }: Props) {
-  setRequestLocale(locale);
+  // Enable static rendering
+  setRequestLocale(locale)
   const messages = await getMessages()
 
   return (

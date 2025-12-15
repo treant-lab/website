@@ -195,7 +195,7 @@ export default function TreantLabPage() {
   }
 
   useEffect(() => {
-    const timer = setTimeout(() => setIsLoading(false), Math.random() * 1000 + 1000) // 
+    const timer = setTimeout(() => setIsLoading(false), 1500)
     return () => clearTimeout(timer)
   }, [])
 

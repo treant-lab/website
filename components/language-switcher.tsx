@@ -1,18 +1,17 @@
 "use client"
 
+import { useState, useEffect } from "react"
 import { useLocale } from "next-intl"
 import Image from "next/image"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 
-function getCookieLocale() {
-  const match = document.cookie.match(/(?:^|; )NEXT_LOCALE=([^;]*)/)
-  return match ? decodeURIComponent(match[1]) : null
-}
-
 export function LanguageSwitcher() {
   const locale = useLocale()
-  const cookieLocale = typeof window !== "undefined" ? getCookieLocale() : null
-  const currentLocale = cookieLocale || locale
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
 
   const handleLocaleChange = (newLocale: string) => {
     localStorage.setItem("NEXT_LOCALE_PREFERENCE", newLocale)
@@ -20,8 +19,15 @@ export function LanguageSwitcher() {
     window.location.reload()
   }
 
+  // Prevent hydration mismatch by not rendering until mounted
+  if (!mounted) {
+    return (
+      <div className="w-[80px] h-10 bg-gray-800 border border-gray-700 rounded-md animate-pulse" />
+    )
+  }
+
   return (
-    <Select value={currentLocale} onValueChange={handleLocaleChange}>
+    <Select value={locale} onValueChange={handleLocaleChange}>
       <SelectTrigger className="w-[80px] bg-gray-800 border-gray-700 text-white focus:ring-emerald-600">
         <SelectValue placeholder="Lang" />
       </SelectTrigger>
