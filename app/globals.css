@@ -18,6 +18,13 @@
   }
 }
 
+/* Hide default cursor on non-touch devices */
+@media (hover: hover) and (pointer: fine) {
+  * {
+    cursor: none !important;
+  }
+}
+
 /* Custom styles for the grid pattern */
 .bg-grid-pattern {
   background-image: linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
