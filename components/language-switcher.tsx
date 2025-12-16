@@ -33,20 +33,29 @@ export function LanguageSwitcher() {
     )
   }
 
+  const flags = {
+    en: { src: "https://flagsapi.com/US/flat/64.png", alt: "English" },
+    pt: { src: "https://flagsapi.com/BR/flat/64.png", alt: "Português" },
+  }
+
+  const currentFlag = flags[locale as keyof typeof flags] || flags.pt
+
   return (
     <Select value={locale} onValueChange={handleLocaleChange}>
-      <SelectTrigger className="w-[80px] bg-gray-800 border-gray-700 text-white focus:ring-emerald-600">
-        <SelectValue placeholder="Lang" />
+      <SelectTrigger className="w-[70px] bg-gray-800 border-gray-700 text-white focus:ring-emerald-600">
+        <Image src={currentFlag.src} alt={currentFlag.alt} width={24} height={16} />
       </SelectTrigger>
       <SelectContent className="bg-gray-800 border-gray-700 text-white min-w-[48px]">
         <SelectItem value="en">
-          <div className="flex items-center">
-            <Image src="https://flagsapi.com/US/flat/64.png" alt="English Flag" width={24} height={16} />
+          <div className="flex items-center gap-2">
+            <Image src={flags.en.src} alt={flags.en.alt} width={24} height={16} />
+            <span>EN</span>
           </div>
         </SelectItem>
         <SelectItem value="pt">
-          <div className="flex items-center">
-            <Image src="https://flagsapi.com/BR/flat/64.png" alt="Portuguese Flag" width={24} height={16} />
+          <div className="flex items-center gap-2">
+            <Image src={flags.pt.src} alt={flags.pt.alt} width={24} height={16} />
+            <span>PT</span>
           </div>
         </SelectItem>
       </SelectContent>
