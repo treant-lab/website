@@ -18,6 +18,10 @@ interface LetterGlitchProps {
   characters?: string
   /** Opacity applied to the canvas so foreground copy stays readable. */
   opacity?: number
+  /** Fired once the canvas has painted its first frame. Used to dismiss the loader. */
+  onReady?: () => void
+  /** Height of the bottom fade-to-black gradient, as a fraction of the component height. */
+  bottomFade?: number
 }
 
 export function LetterGlitch({
@@ -29,6 +33,8 @@ export function LetterGlitch({
   smooth = true,
   characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$&*()-_+=/[]{};:<>.,0123456789",
   opacity = 1,
+  onReady,
+  bottomFade = 0,
 }: LetterGlitchProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const animationRef = useRef<number>()
@@ -36,6 +42,9 @@ export function LetterGlitch({
   const grid = useRef({ columns: 0, rows: 0 })
   const context = useRef<CanvasRenderingContext2D | null>(null)
   const lastGlitchTime = useRef(Date.now())
+  const onReadyRef = useRef(onReady)
+  onReadyRef.current = onReady
+  const readyFired = useRef(false)
 
   const fontSize = 16
   const charWidth = 10
@@ -135,6 +144,12 @@ export function LetterGlitch({
 
     context.current = canvas.getContext("2d")
     resize()
+    // First frame is on screen — let the loader dismiss and the fade-in start.
+    if (!readyFired.current) {
+      readyFired.current = true
+      if (debug) console.log("[LetterGlitch] first paint")
+      onReadyRef.current?.()
+    }
     if (reduced) {
       if (debug) console.log("[LetterGlitch] reduced motion — static frame")
     } else {
@@ -165,6 +180,15 @@ export function LetterGlitch({
       {outerVignette && (
         <div className="pointer-events-none absolute inset-0"
           style={{ background: "radial-gradient(circle, rgba(0,0,0,0) 60%, rgba(0,0,0,1) 100%)" }} />
+      )}
+      {bottomFade > 0 && (
+        <div
+          className="pointer-events-none absolute inset-x-0 bottom-0"
+          style={{
+            height: `${bottomFade * 100}%`,
+            background: "linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%)",
+          }}
+        />
       )}
       {centerVignette && (
         <div className="pointer-events-none absolute inset-0"

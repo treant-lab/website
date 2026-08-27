@@ -70,3 +70,54 @@ select option {
   background: #0d1210;
   color: #fff;
 }
+
+/* --- Loader + entrance animations --- */
+
+/* Indeterminate sweep for the page loader bar. */
+@keyframes loader-sweep {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(300%); }
+}
+.loader-sweep {
+  animation: loader-sweep 1.1s ease-in-out infinite;
+}
+
+/* Hero entrance: fade up. Elements start hidden and are revealed by .is-revealed,
+   set once the loader dismisses, with per-element delay via --reveal-delay. */
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: none; }
+}
+@keyframes fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.reveal {
+  opacity: 0;
+}
+.is-revealed .reveal {
+  animation: fade-up 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation-delay: var(--reveal-delay, 0ms);
+}
+.is-revealed .reveal-fade {
+  animation: fade-in 1.2s ease-out forwards;
+  animation-delay: var(--reveal-delay, 0ms);
+}
+
+/* Reduced motion: reveal instantly, no travel, no infinite sweep. */
+@media (prefers-reduced-motion: reduce) {
+  .loader-sweep {
+    animation: none;
+    width: 100%;
+  }
+  .reveal {
+    opacity: 1;
+  }
+  .is-revealed .reveal,
+  .is-revealed .reveal-fade {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}

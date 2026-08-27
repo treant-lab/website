@@ -2,6 +2,7 @@
 
 import { useTranslations } from "next-intl"
 import { ArrowRight, ChevronDown, Check } from "lucide-react"
+import { HackerEmblem } from "@/components/ui/hacker-emblem"
 
 // Approved in design lab: split layout (headline + line-art left, form right).
 // Fields are transparent with square corners; emerald focus ring.
@@ -29,20 +30,9 @@ export function ContactSection() {
               {t("headline")}
             </h2>
             <p className="mt-7 text-[19px] font-light text-gray-400">{t("headline_description")}</p>
-            <svg
-              className="pointer-events-none mt-20 hidden w-full max-w-[420px] text-white/[0.07] lg:block"
-              viewBox="0 0 420 300"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth={1.2}
-              aria-hidden="true"
-            >
-              <rect x="14" y="96" width="92" height="150" transform="rotate(-24 14 96)" />
-              <path d="M150 40 L210 130 L150 220" />
-              <path d="M96 190 L210 130 L330 130" />
-              <rect x="238" y="196" width="118" height="62" />
-              <circle cx="330" cy="130" r="26" />
-            </svg>
+            <div className="mt-20 hidden lg:block">
+              <HackerEmblem size={420} />
+            </div>
           </div>
 
           {/* Right: form */}
