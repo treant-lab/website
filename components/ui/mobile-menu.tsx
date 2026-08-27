@@ -7,7 +7,8 @@ import { Button } from '@/components/ui/button'
 
 interface MobileMenuProps {
   items: { label: string; href: string }[]
-  ctaLabel: string
+  /** Optional CTA at the foot of the menu; omitted when not provided. */
+  ctaLabel?: string
   onNavigate: (id: string) => void
 }
 
@@ -77,19 +78,21 @@ export function MobileMenu({ items, ctaLabel, onNavigate }: MobileMenuProps) {
                   </motion.a>
                 ))}
 
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: items.length * 0.1 }}
-                  className="pt-4"
-                >
-                  <Button
-                    className="w-full bg-emerald-600 hover:bg-emerald-700"
-                    onClick={() => handleClick('#contact')}
+                {ctaLabel && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: items.length * 0.1 }}
+                    className="pt-4"
                   >
-                    {ctaLabel}
-                  </Button>
-                </motion.div>
+                    <Button
+                      className="w-full bg-emerald-600 hover:bg-emerald-700"
+                      onClick={() => handleClick('#contact')}
+                    >
+                      {ctaLabel}
+                    </Button>
+                  </motion.div>
+                )}
               </nav>
 
               {/* Decorative element */}

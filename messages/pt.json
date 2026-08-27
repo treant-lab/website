@@ -42,13 +42,27 @@
     ],
     "devsecops_title": "DevSecOps",
     "devsecops_description": "Integração de segurança no ciclo de desenvolvimento com automação e práticas de código seguro.",
-    "devsecops_features": ["SAST/DAST", "Container Security", "CI/CD Security", "Code Review"],
+    "devsecops_features": [
+      "SAST/DAST",
+      "Container Security",
+      "CI/CD Security",
+      "Code Review"
+    ],
     "specialized_training_title": "Treinamento Especializado",
     "specialized_training_description": "Capacitação técnica avançada para equipes de TI e desenvolvimento com certificações reconhecidas.",
-    "specialized_training_features": ["Ethical Hacking", "Secure Coding", "Incident Response", "Compliance Training"],
+    "specialized_training_features": [
+      "Ethical Hacking",
+      "Secure Coding",
+      "Incident Response",
+      "Compliance Training"
+    ],
     "and_much_more_title": "E muito mais",
     "and_much_more_description": "Oferecemos serviços adicionais como estruturação de SOC e consultoria em conformidade. Entre em contato para soluções personalizadas.",
-    "know_services": "Quero conhecer os serviços"
+    "know_services": "Quero conhecer os serviços",
+    "incident_response_title": "Resposta a Incidentes",
+    "compliance_title": "Compliance & GRC",
+    "headline": "Soluções completas para defesa digital",
+    "headline_description": "Testes ofensivos, inteligência de ameaças e engenharia segura — trabalhamos com você para encontrar o que um atacante encontraria primeiro e fechar antes dele."
   },
   "About": {
     "who_we_are": "Quem Somos",
@@ -84,7 +98,17 @@
       "devsecops": "DevSecOps",
       "training": "Treinamento",
       "general": "Consulta Geral"
-    }
+    },
+    "first_name": "Nome",
+    "last_name": "Sobrenome",
+    "phone": "Telefone",
+    "job_title": "Cargo",
+    "country_code": "Código do país",
+    "newsletter_optin": "Quero receber pesquisas e insights de segurança da TreantLab.",
+    "privacy_agree": "Li e concordo com a",
+    "privacy_policy": "política de privacidade",
+    "headline": "Siga o caminho mais seguro.",
+    "headline_description": "Entraremos em contato o mais rápido possível."
   },
   "Products": {
     "section_title": "Nosso Ecossistema",
@@ -101,49 +125,95 @@
         "name": "TEVI",
         "tagline": "Plataforma de Verificação de Identidade",
         "description": "Plataforma completa de verificação de identidade com reconhecimento facial, OCR de documentos e detecção de fraudes.",
-        "features": ["Reconhecimento Facial", "OCR de Documentos", "Detecção de Fraudes", "SDKs Mobile", "Age Mismatch", "Device Hygiene"]
+        "features": [
+          "Reconhecimento Facial",
+          "OCR de Documentos",
+          "Detecção de Fraudes",
+          "SDKs Mobile",
+          "Age Mismatch",
+          "Device Hygiene"
+        ]
       },
       "tamandua": {
         "name": "Tamandua EDR",
         "tagline": "Detecção e Resposta de Endpoint",
         "description": "EDR de próxima geração com detecção zero-shot de malware, análise comportamental e resposta automatizada.",
-        "features": ["Detecção Zero-shot", "Análise Comportamental", "Attack Graph", "Honeyfiles", "Resposta Auto"]
+        "features": [
+          "Detecção Zero-shot",
+          "Análise Comportamental",
+          "Attack Graph",
+          "Honeyfiles",
+          "Resposta Auto"
+        ]
       },
       "fortress": {
         "name": "Fortress Exchange",
         "tagline": "Exchange Crypto Focada em Privacidade",
         "description": "Exchange de criptomoedas com foco em moedas de privacidade. Order book e carteiras seguras.",
-        "features": ["BTC, ETH, XMR, ZEC", "Order Book", "Carteiras Seguras", "KYC/AML", "App Mobile"]
+        "features": [
+          "BTC, ETH, XMR, ZEC",
+          "Order Book",
+          "Carteiras Seguras",
+          "KYC/AML",
+          "App Mobile"
+        ]
       },
       "guarapay": {
         "name": "GuaraPay",
         "tagline": "Infraestrutura Fintech",
         "description": "Infraestrutura fintech completa com processamento de pagamentos, SDKs e APIs seguras.",
-        "features": ["Processamento de Pagamentos", "SDKs Multi-plataforma", "APIs Seguras", "Monitoramento"]
+        "features": [
+          "Processamento de Pagamentos",
+          "SDKs Multi-plataforma",
+          "APIs Seguras",
+          "Monitoramento"
+        ]
       },
       "restitue": {
         "name": "Restitue.ai",
         "tagline": "SaaS de Recuperação de Créditos",
         "description": "Plataforma SaaS para recuperação de créditos PIS/COFINS com auditoria automatizada de NFe.",
-        "features": ["Processamento NFe", "Cálculo Automático", "Assistente IA", "Relatórios", "Multi-tenant"]
+        "features": [
+          "Processamento NFe",
+          "Cálculo Automático",
+          "Assistente IA",
+          "Relatórios",
+          "Multi-tenant"
+        ]
       },
       "pokerzone": {
         "name": "PokerZone",
         "tagline": "Plataforma de Poker Online",
         "description": "Poker multiplayer em tempo real com torneios, salas e progressão de jogadores.",
-        "features": ["Multiplayer", "Torneios", "Progressão", "Atualizações Live"]
+        "features": [
+          "Multiplayer",
+          "Torneios",
+          "Progressão",
+          "Atualizações Live"
+        ]
       },
       "kairos": {
         "name": "Kairos",
         "tagline": "Trading de Opções Binárias",
         "description": "Plataforma de trading em tempo real para opções binárias, forex e crypto.",
-        "features": ["Opções Binárias", "Gráficos Live", "Trading Mobile", "Pagamentos Instant"]
+        "features": [
+          "Opções Binárias",
+          "Gráficos Live",
+          "Trading Mobile",
+          "Pagamentos Instant"
+        ]
       },
       "fruit": {
         "name": "Fruit BaaS",
         "tagline": "Backend as a Service",
         "description": "Infraestrutura backend completa com módulos Seed, Tree, Soil e Cluster para desenvolvimento rápido.",
-        "features": ["Auth & Usuários", "Banco de Dados", "Storage", "API Gateway", "Escalável"]
+        "features": [
+          "Auth & Usuários",
+          "Banco de Dados",
+          "Storage",
+          "API Gateway",
+          "Escalável"
+        ]
       }
     }
   },
@@ -156,5 +226,29 @@
     "email": "Email: contato@treantlab.org",
     "cnpj": "CNPJ: 61.618.812/0001-90",
     "copyright": "© {year} TreantLab. Todos os direitos reservados. Especialistas em Cibersegurança."
+  },
+  "CaseStudies": {
+    "section_title": "Quem confia na gente",
+    "section_subtitle": "Fintechs, exchanges e redes de saúde que precisavam que a segurança resistisse a um escrutínio real — não apenas passar em uma auditoria.",
+    "items": {
+      "fintech": {
+        "quote": "Encontraram em quatro dias o que duas auditorias anteriores não viram. O plano de remediação foi o que realmente importou — era nosso para executar, não um PDF para arquivar.",
+        "client": "Fintech Tier-1",
+        "role": "Head de Segurança",
+        "sector": "Serviços Financeiros"
+      },
+      "exchange": {
+        "quote": "Um runner de build comprometido estava a um passo das nossas chaves de assinatura. Eles mapearam a cadeia, fecharam e colocaram detecção em toda a frota em um mês.",
+        "client": "Exchange de Cripto",
+        "role": "CTO",
+        "sector": "Ativos Digitais"
+      },
+      "health": {
+        "quote": "Quatorze sistemas, nenhuma trilha de auditoria unificada e um regulador fazendo perguntas. Eles mapearam, consolidaram identidade e nos deram evidências que podíamos mostrar.",
+        "client": "Rede de Saúde",
+        "role": "CISO",
+        "sector": "Saúde"
+      }
+    }
   }
 }

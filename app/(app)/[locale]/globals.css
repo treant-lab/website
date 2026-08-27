@@ -52,3 +52,21 @@ html {
 .dark {
   color-scheme: dark;
 }
+
+/* --- Redesign (design lab) --- */
+
+/* Nav sits transparent over the LetterGlitch canvas; shadow keeps it legible. */
+.nav-legible {
+  text-shadow: 0 1px 12px rgba(0, 0, 0, 0.9), 0 0 24px rgba(0, 0, 0, 0.6);
+}
+
+/* Custom checkbox: Tailwind's peer-* can't reach a nested child, so drive it here. */
+input[type="checkbox"]:checked + span .check-mark {
+  opacity: 1;
+}
+
+/* Native select menus render on the OS surface — force dark options. */
+select option {
+  background: #0d1210;
+  color: #fff;
+}

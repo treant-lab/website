@@ -26,19 +26,43 @@
     "description": "We offer a comprehensive portfolio of specialized services to protect your organization against the most sophisticated threats.",
     "advanced_pentest_title": "Advanced Pentest",
     "advanced_pentest_description": "Complete penetration tests with OWASP and NIST methodologies, including code and infrastructure analysis.",
-    "advanced_pentest_features": ["Black Box Testing", "White Box Testing", "Red Team Operations", "Executive Reports"],
+    "advanced_pentest_features": [
+      "Black Box Testing",
+      "White Box Testing",
+      "Red Team Operations",
+      "Executive Reports"
+    ],
     "threat_intelligence_title": "Threat Intelligence",
     "threat_intelligence_description": "Real-time threat intelligence with 24/7 monitoring and predictive risk analysis.",
-    "threat_intelligence_features": ["Dark Web Monitoring", "IOC Analysis", "Threat Hunting", "Custom Reports"],
+    "threat_intelligence_features": [
+      "Dark Web Monitoring",
+      "IOC Analysis",
+      "Threat Hunting",
+      "Custom Reports"
+    ],
     "devsecops_title": "DevSecOps",
     "devsecops_description": "Integration of security into the development cycle with automation and secure code practices.",
-    "devsecops_features": ["SAST/DAST", "Container Security", "CI/CD Security", "Code Review"],
+    "devsecops_features": [
+      "SAST/DAST",
+      "Container Security",
+      "CI/CD Security",
+      "Code Review"
+    ],
     "specialized_training_title": "Specialized Training",
     "specialized_training_description": "Advanced technical training for IT and development teams with recognized certifications.",
-    "specialized_training_features": ["Ethical Hacking", "Secure Coding", "Incident Response", "Compliance Training"],
+    "specialized_training_features": [
+      "Ethical Hacking",
+      "Secure Coding",
+      "Incident Response",
+      "Compliance Training"
+    ],
     "and_much_more_title": "And much more",
     "and_much_more_description": "We offer additional services such as SOC structuring and compliance consulting. Contact us for customized solutions.",
-    "know_services": "I want to know the services"
+    "know_services": "I want to know the services",
+    "incident_response_title": "Incident Response",
+    "compliance_title": "Compliance & GRC",
+    "headline": "Complete solutions for digital defense",
+    "headline_description": "Offensive testing, threat intelligence and secure engineering — we partner with you to find what attackers would find first, then close it before they do."
   },
   "About": {
     "who_we_are": "Who We Are",
@@ -74,7 +98,17 @@
       "devsecops": "DevSecOps",
       "training": "Training",
       "general": "General Consultation"
-    }
+    },
+    "first_name": "First Name",
+    "last_name": "Last Name",
+    "phone": "Phone Number",
+    "job_title": "Job Title",
+    "country_code": "Country code",
+    "newsletter_optin": "I would like to receive TreantLab security research and insights.",
+    "privacy_agree": "I have read and agree with the",
+    "privacy_policy": "privacy policy",
+    "headline": "Take the safer path.",
+    "headline_description": "We will be in touch as soon as possible."
   },
   "Products": {
     "section_title": "Our Ecosystem",
@@ -91,49 +125,95 @@
         "name": "TEVI",
         "tagline": "Identity Verification Platform",
         "description": "Complete identity verification platform with facial recognition, document OCR, fraud detection and anti-fraud intelligence.",
-        "features": ["Face Recognition", "Document OCR", "Fraud Detection", "Mobile SDKs", "Age Mismatch", "Device Hygiene"]
+        "features": [
+          "Face Recognition",
+          "Document OCR",
+          "Fraud Detection",
+          "Mobile SDKs",
+          "Age Mismatch",
+          "Device Hygiene"
+        ]
       },
       "tamandua": {
         "name": "Tamandua EDR",
         "tagline": "Endpoint Detection & Response",
         "description": "Next-generation EDR solution with zero-shot malware detection, behavioral analysis, and automated response.",
-        "features": ["Zero-shot Detection", "Behavioral Analysis", "Attack Graph", "Honeyfiles", "Auto Response"]
+        "features": [
+          "Zero-shot Detection",
+          "Behavioral Analysis",
+          "Attack Graph",
+          "Honeyfiles",
+          "Auto Response"
+        ]
       },
       "fortress": {
         "name": "Fortress Exchange",
         "tagline": "Privacy-focused Crypto Exchange",
         "description": "Full-stack cryptocurrency exchange with focus on privacy coins. Order book trading and secure wallets.",
-        "features": ["BTC, ETH, XMR, ZEC", "Order Book", "Secure Wallets", "KYC/AML", "Mobile App"]
+        "features": [
+          "BTC, ETH, XMR, ZEC",
+          "Order Book",
+          "Secure Wallets",
+          "KYC/AML",
+          "Mobile App"
+        ]
       },
       "guarapay": {
         "name": "GuaraPay",
         "tagline": "Fintech Infrastructure",
         "description": "Complete fintech infrastructure with payment processing, SDKs and secure integration APIs.",
-        "features": ["Payment Processing", "Multi-platform SDKs", "Secure APIs", "Monitoring"]
+        "features": [
+          "Payment Processing",
+          "Multi-platform SDKs",
+          "Secure APIs",
+          "Monitoring"
+        ]
       },
       "restitue": {
         "name": "Restitue.ai",
         "tagline": "Tax Credit Recovery SaaS",
         "description": "SaaS platform for recovering PIS/COFINS tax credits with automated NFe audit and AI assistant.",
-        "features": ["NFe Processing", "Auto Calculation", "AI Assistant", "Reports", "Multi-tenant"]
+        "features": [
+          "NFe Processing",
+          "Auto Calculation",
+          "AI Assistant",
+          "Reports",
+          "Multi-tenant"
+        ]
       },
       "pokerzone": {
         "name": "PokerZone",
         "tagline": "Online Poker Platform",
         "description": "Real-time multiplayer poker with tournaments, game rooms and player progression.",
-        "features": ["Multiplayer", "Tournaments", "Player Progression", "Live Updates"]
+        "features": [
+          "Multiplayer",
+          "Tournaments",
+          "Player Progression",
+          "Live Updates"
+        ]
       },
       "kairos": {
         "name": "Kairos",
         "tagline": "Binary Options Trading",
         "description": "Real-time trading platform for binary options, forex and crypto with live charts.",
-        "features": ["Binary Options", "Live Charts", "Mobile Trading", "Instant Payouts"]
+        "features": [
+          "Binary Options",
+          "Live Charts",
+          "Mobile Trading",
+          "Instant Payouts"
+        ]
       },
       "fruit": {
         "name": "Fruit BaaS",
         "tagline": "Backend as a Service",
         "description": "Complete backend infrastructure with Seed, Tree, Soil and Cluster modules for rapid development.",
-        "features": ["Auth & Users", "Database", "File Storage", "API Gateway", "Scalable"]
+        "features": [
+          "Auth & Users",
+          "Database",
+          "File Storage",
+          "API Gateway",
+          "Scalable"
+        ]
       }
     }
   },
@@ -146,5 +226,29 @@
     "email": "Email: contato@treantlab.org",
     "cnpj": "CNPJ: 61.618.812/0001-90",
     "copyright": "© {year} TreantLab. All rights reserved. Cybersecurity Specialists."
+  },
+  "CaseStudies": {
+    "section_title": "The teams who trust us",
+    "section_subtitle": "Fintechs, exchanges and health networks who needed their security to hold up under real scrutiny — not just pass an audit.",
+    "items": {
+      "fintech": {
+        "quote": "They found in four days what two prior audits missed entirely. The remediation plan was the part that actually mattered — it was ours to run, not a PDF to file.",
+        "client": "Tier-1 Fintech",
+        "role": "Head of Security",
+        "sector": "Financial Services"
+      },
+      "exchange": {
+        "quote": "A compromised build runner was one step from our signing keys. They caught the chain, closed it, and had detection live across the fleet inside a month.",
+        "client": "Crypto Exchange",
+        "role": "CTO",
+        "sector": "Digital Assets"
+      },
+      "health": {
+        "quote": "Fourteen systems, no unified audit trail, and a regulator asking questions. They mapped it, consolidated identity, and gave us evidence we could actually show.",
+        "client": "Health Network",
+        "role": "CISO",
+        "sector": "Healthcare"
+      }
+    }
   }
 }

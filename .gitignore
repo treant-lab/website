@@ -25,3 +25,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+# design lab (temporário, local apenas)
+/.claude-design/
+/app/(app)/\[locale\]/design-lab/
+.DS_Store
