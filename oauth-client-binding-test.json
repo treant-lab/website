@@ -1,0 +1,14 @@
+{
+  "client_id": "https://treantlab.org/oauth-client-binding-test.json",
+  "client_name": "Treant Lab OAuth redirect binding probe",
+  "redirect_uris": [
+    "https://treantlab.org/oauth/callback"
+  ],
+  "grant_types": [
+    "authorization_code"
+  ],
+  "response_types": [
+    "code"
+  ],
+  "token_endpoint_auth_method": "none"
+}
