@@ -1,0 +1,21 @@
+{
+  "client_id": "https://treantlab.org/a2a-oauth-client-metadata-profile.json",
+  "client_name": "Treant Lab authorized Rovo A2A profile probe",
+  "redirect_uris": [
+    "http://localhost:43127/callback"
+  ],
+  "grant_types": [
+    "authorization_code",
+    "refresh_token"
+  ],
+  "response_types": [
+    "code"
+  ],
+  "token_endpoint_auth_method": "none",
+  "scope": "read:me offline_access full_access:chat:rovo",
+  "code_challenge_methods_supported": [
+    "S256"
+  ],
+  "client_profile": "ai.a2adcr3p",
+  "disabled": false
+}
