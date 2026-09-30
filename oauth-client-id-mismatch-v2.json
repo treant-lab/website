@@ -1,0 +1,19 @@
+{
+  "client_id": "https://treantlab.org/not-the-requested-client-v2.json",
+  "client_name": "Treant Lab OAuth client ID mismatch v2",
+  "redirect_uris": [
+    "http://localhost:43127/callback"
+  ],
+  "grant_types": [
+    "authorization_code",
+    "refresh_token"
+  ],
+  "response_types": [
+    "code"
+  ],
+  "token_endpoint_auth_method": "none",
+  "scope": "read:me offline_access",
+  "code_challenge_methods_supported": [
+    "S256"
+  ]
+}
